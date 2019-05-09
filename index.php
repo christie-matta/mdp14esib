@@ -31,7 +31,7 @@ if (isset($_GET['action']))
         /*Insert data.*/  
         $insertSql = "INSERT INTO Machine (machine_name,location,deployment_date)   
 VALUES (?,?,?)";  
-        $params = array(&$_POST['t_emp_id'], &$_POST['t_name'], &$_POST['t_education'], &$_POST['t_email']  
+        $params = array(&$_POST['t_name'], &$_POST['t_education'], &$_POST['t_email']  
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
         if ($stmt === false)  
