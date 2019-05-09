@@ -143,6 +143,11 @@
       {  
       die(print_r(sqlsrv_errors() , true));  
       }  
+   
+    if (isset($_GET['action']))  
+      {  
+    echo(<div> success </div> <br>);
+      } 
 
       ?>
     
