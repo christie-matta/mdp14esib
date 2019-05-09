@@ -71,7 +71,7 @@
                 </a>
               </div>
               <br><br><br>
-<form method="post" action="?action=add" enctype="multipart/form-data" >  
+<form id="contactform" method="post" action="?action=add" enctype="multipart/form-data"  >  
  First Name : <input type="text" name="fname" id="fname" class="form-control"/ ></br>  
 Last Name : <input type="text" name="lname" id="lname"  class="form-control"/><te/br>  
 E-mail : <input type="text" name="email" id="email"  class="form-control"/></br>
