@@ -52,13 +52,13 @@
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-interval="500">
-                    <img src="C:\Users\USER\Desktop\MDP_Website\beach1.jpg" class="d-block w-100" alt="Beach Kfar Abida">
+                    <img src="beach1.jpg" class="d-block w-100" alt="Beach Kfar Abida">
                   </div>
                   <div class="carousel-item" data-interval="500">
-                    <img src="C:\Users\USER\Desktop\MDP_Website\beach2.jpg" class="d-block w-100" alt="Beach Kfar Abida">
+                    <img src="beach2.jpg" class="d-block w-100" alt="Beach Kfar Abida">
                   </div>
                   <div class="carousel-item" data-interval="500">
-                    <img src="C:\Users\USER\Desktop\MDP_Website\beach3.jpg" class="d-block w-100" alt="Beach Kfar Abida">
+                    <img src="beach3.jpg" class="d-block w-100" alt="Beach Kfar Abida">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -163,7 +163,7 @@ VALUES (?,?,?,?,?)";
     
            
             <div class="col-md-3 mx-auto">
-                <img src="C:\Users\USER\Desktop\MDP_Website\esib.png"
+                <img src="esib.png"
     
     
             </div>
