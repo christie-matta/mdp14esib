@@ -71,14 +71,72 @@
                 </a>
               </div>
               <br><br><br>
-<form id="contactform" method="post" action="?action=add" enctype="multipart/form-data"  >  
+<!--<form id="contactform" method="post" action="?action=add" enctype="multipart/form-data"  >  
  First Name : <input type="text" name="fname" id="fname" class="form-control"/ ></br>  
 Last Name : <input type="text" name="lname" id="lname"  class="form-control"/><te/br>  
 E-mail : <input type="text" name="email" id="email"  class="form-control"/></br>
 Message : <input type="text" name="message" id="message"  class="form-control" /></br>  <br>
 <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg" justify-content="center"/>  
    <br><br>
-</form>  
+</form> --> 
+   
+   <form id="contactform" method="post" action="?action=add" enctype="multipart/form-data" >     
+<div>
+    <div> 
+        <div class="row d-flex justify-content-center">
+              <h1 style="color:white" class="white-text mb-0 py-5 font-weight-bold">Contact Us</h1>
+            </div>
+      
+          </div>
+        
+      <div class="card-body mx-4">
+      
+            <div class="md-form">
+              <i class="fas fa-user prefix grey-text"></i>
+              <label for="form104">Your first name:</label>
+              <input type="text" id="form104" name="fname" class="form-control">
+              <br>
+            </div>
+
+            <div class="md-form">
+              <i class="fas fa-user prefix grey-text"></i>
+              <label for="form104">Your last name:</label>
+              <input type="text" id="form104" name="lname" class="form-control">
+              <br>
+            </div>
+      
+            <div class="md-form">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <label for="form105">Your e-mail:</label>
+              <input type="text" id="form105" name="email" class="form-control">
+              <br>
+              
+            </div>
+      
+            
+      <div class="md-form">
+              <i class="fas fa-pencil-alt prefix grey-text"></i>
+              <label for="form107">Your message:</label>
+              <textarea id="form107" name="message" class="md-textarea form-control" rows="5"></textarea>
+              <br>
+              
+            </div>
+      
+      
+         <div class="row d-flex align-items-center mb-3 mt-4">
+              <div class="col-md-12">
+                <div class="text-center">
+                    <input type="submit" name="submit" value="Submit" />  
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+
+      </form> 
+   
+   
 <?php  
 /*Connect using SQL Server authentication.*/  
 $serverName = "tcp:server-mdp.database.windows.net,1433";  
