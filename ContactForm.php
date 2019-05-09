@@ -72,11 +72,11 @@
               </div>
               <br><br><br>
 <form method="post" action="?action=add" enctype="multipart/form-data" >  
- First Name <input type="text" name="fname" id="fname" class="form-control"/ ></br>  
-Last Name <input type="text" name="lname" id="lname"  class="form-control"/></br>  
-email <input type="text" name="email" id="email"  class="form-control"/></br>
-message <input type="text" name="message" id="message"  class="form-control" /></br>  
-<input type="submit" name="submit" value="Submit" />  
+ First Name : <input type="text" name="fname" id="fname" class="form-control"/ ></br>  
+Last Name : <input type="text" name="lname" id="lname"  class="form-control"/><te/br>  
+E-mail : <input type="text" name="email" id="email"  class="form-control"/></br>
+Message : <input type="text" name="message" id="message"  class="form-control" /></br>  
+<input type="submit" name="submit" value="Submit" class="btn-primary" class="text-centre" />  
 </form>  
 <?php  
 /*Connect using SQL Server authentication.*/  
