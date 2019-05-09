@@ -143,12 +143,9 @@
       {  
       die(print_r(sqlsrv_errors() , true));  
       }  
+   else {echo("success <br>");} 
    
-    if (isset($_GET['action']))  
-      {  
-    echo(<div> success </div> <br>);
-      } 
-
+   
       ?>
     
 </body>
