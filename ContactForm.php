@@ -71,16 +71,16 @@
                 </a>
               </div>
               <br><br><br>
-<!--<form id="contactform" method="post" action="?action=add" enctype="multipart/form-data"  >  
+<form id="contactform" method="post" action="?action=add" enctype="multipart/form-data"  >  
  First Name : <input type="text" name="fname" id="fname" class="form-control"/ ></br>  
 Last Name : <input type="text" name="lname" id="lname"  class="form-control"/><te/br>  
 E-mail : <input type="text" name="email" id="email"  class="form-control"/></br>
 Message : <input type="text" name="message" id="message"  class="form-control" /></br>  <br>
 <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg" justify-content="center"/>  
    <br><br>
-</form> --> 
+</form>  
    
-   <form id="contactform" method="post" action="?action=add" enctype="multipart/form-data" >     
+   <!--<form id="contactform" method="post" action="?action=add" enctype="multipart/form-data" >     
 <div>
     <div> 
         <div class="row d-flex justify-content-center">
@@ -134,7 +134,7 @@ Message : <input type="text" name="message" id="message"  class="form-control" /
       
         </div>
 
-      </form> 
+      </form> -->
    
    
 <?php  
