@@ -71,62 +71,59 @@
                 </a>
               </div>
               <br><br><br>
-<form method="post" action="actionform.php" enctype="multipart/form-data" >     
-<div>
-    <div> 
-        <div class="row d-flex justify-content-center">
-              <h1 style="color:white" class="white-text mb-0 py-5 font-weight-bold">Contact Us</h1>
-            </div>
-      
-          </div>
-        
-      <div class="card-body mx-4">
-      
-            <div class="md-form">
-              <i class="fas fa-user prefix grey-text"></i>
-              <label for="form104">Your first name:</label>
-              <input type="text" id="form104" name="fname" class="form-control">
-              <br>
-            </div>
-
-            <div class="md-form">
-              <i class="fas fa-user prefix grey-text"></i>
-              <label for="form104">Your last name:</label>
-              <input type="text" id="form104" name="lname" class="form-control">
-              <br>
-            </div>
-      
-            <div class="md-form">
-              <i class="fas fa-envelope prefix grey-text"></i>
-              <label for="form105">Your e-mail:</label>
-              <input type="text" id="form105" name="email" class="form-control">
-              <br>
-              
-            </div>
-      
-            
-      <div class="md-form">
-              <i class="fas fa-pencil-alt prefix grey-text"></i>
-              <label for="form107">Your message:</label>
-              <textarea id="form107" name="message" class="md-textarea form-control" rows="5"></textarea>
-              <br>
-              
-            </div>
-      
-      
-         <div class="row d-flex align-items-center mb-3 mt-4">
-              <div class="col-md-12">
-                <div class="text-center">
-                    <input type="submit" name="submit" value="Submit" />  
-                </div>
-              </div>
-            </div>
-          </div>
-      
-        </div>
-
-      </form> 
-     
+<form method="post" action="?action=add" enctype="multipart/form-data" >  
+ Machine Name <input type="text" name="t_name" id="t_name"/></br>  
+Location <input type="text" name="t_education" id="t_education"/></br>  
+Deployment Date <input type="text" name="t_email" id="t_email"/></br>  
+<input type="submit" name="submit" value="Submit" />  
+</form>  
+<?php  
+/*Connect using SQL Server authentication.*/  
+$serverName = "tcp:server-mdp.database.windows.net,1433";  
+$connectionOptions = array(  
+    "Database" => "DB-MDP",  
+    "UID" => "adminmdp",  
+    "PWD" => "p@ssw0rd"  
+);  
+$conn = sqlsrv_connect($serverName, $connectionOptions);  
+  
+if ($conn === false)  
+    {  
+    die(print_r(sqlsrv_errors() , true));  
+    }  
+  
+if (isset($_GET['action']))  
+    {  
+    if ($_GET['action'] == 'add')  
+        {  
+        /*Insert data.*/  
+        $insertSql = "INSERT INTO Machine (machine_name,location,deployment_date)   
+VALUES (?,?,?)";  
+        $params = array( &$_POST['t_name'], &$_POST['t_education'], &$_POST['t_email']  
+        );  
+        $stmt = sqlsrv_query($conn, $insertSql, $params);  
+        if ($stmt === false)  
+            {  
+            /*Handle the case of a duplicte e-mail address.*/  
+            $errors = sqlsrv_errors();  
+            if ($errors[0]['code'] == 2601)  
+                {  
+                echo "The e-mail address you entered has already been used.</br>";  
+                }  
+  
+            /*Die if other errors occurred.*/  
+              else  
+                {  
+                die(print_r($errors, true));  
+                }  
+            }  
+          else  
+            {  
+            echo "Registration complete.</br>";  
+            }  
+        }  
+    }  
+  ?>
    
     
 </body>
