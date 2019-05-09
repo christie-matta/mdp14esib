@@ -57,7 +57,7 @@ VALUES (?,?,?)";
     }  
   
 /*Display registered people.*/  
-$sql = "SELECT * FROM Measurement ORDER BY name"; 
+$sql = "SELECT * FROM Measurement"; 
 $stmt = sqlsrv_query($conn, $sql); 
 if($stmt === false) 
 { 
