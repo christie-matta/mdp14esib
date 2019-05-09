@@ -126,7 +126,7 @@ Message : <input type="text" name="message" id="message"  class="form-control" /
          <div class="row d-flex align-items-center mb-3 mt-4">
               <div class="col-md-12">
                 <div class="text-center">
-                    <input type="submit" name="submit" value="Submit" />  
+                    <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg"  />  
                 </div>
               </div>
             </div>
