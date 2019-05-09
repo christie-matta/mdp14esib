@@ -72,9 +72,10 @@
               </div>
               <br><br><br>
 <form method="post" action="?action=add" enctype="multipart/form-data" >  
- Machine Name <input type="text" name="t_name" id="t_name"/></br>  
-Location <input type="text" name="t_education" id="t_education"/></br>  
-Deployment Date <input type="text" name="t_email" id="t_email"/></br>  
+ First Name <input type="text" name="fname" id="fname"/></br>  
+Last Name <input type="text" name="lname" id="lname"/></br>  
+email <input type="text" name="email" id="email"/></br>
+message <input type="text" name="message" id="message"/></br>  
 <input type="submit" name="submit" value="Submit" />  
 </form>  
 <?php  
@@ -97,9 +98,9 @@ if (isset($_GET['action']))
     if ($_GET['action'] == 'add')  
         {  
         /*Insert data.*/  
-        $insertSql = "INSERT INTO Machine (machine_name,location,deployment_date)   
-VALUES (?,?,?)";  
-        $params = array( &$_POST['t_name'], &$_POST['t_education'], &$_POST['t_email']  
+        $insertSql = "INSERT INTO ContactForm (form_fname,form_lname,form_email,form_message,form_date)   
+VALUES (?,?,?,?,?)";  
+        $params = array( &$_POST['fname'], &$_POST['lname'], &$_POST['email'] ,&$_POST['message']  , date("Y-m-d")
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
         if ($stmt === false)  
@@ -108,7 +109,7 @@ VALUES (?,?,?)";
             $errors = sqlsrv_errors();  
             if ($errors[0]['code'] == 2601)  
                 {  
-                echo "The e-mail address you entered has already been used.</br>";  
+                echo " Success </br>";  
                 }  
   
             /*Die if other errors occurred.*/  
@@ -119,7 +120,7 @@ VALUES (?,?,?)";
             }  
           else  
             {  
-            echo "Registration complete.</br>";  
+            echo "Message sent </br>";  
             }  
         }  
     }  
