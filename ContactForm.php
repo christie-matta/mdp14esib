@@ -76,7 +76,8 @@
 Last Name : <input type="text" name="lname" id="lname"  class="form-control"/><te/br>  
 E-mail : <input type="text" name="email" id="email"  class="form-control"/></br>
 Message : <input type="text" name="message" id="message"  class="form-control" /></br>  
-<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg" align="centre" />  
+<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg" align="center" />  
+   <br><br><br><br>
 </form>  
 <?php  
 /*Connect using SQL Server authentication.*/  
