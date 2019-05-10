@@ -43,9 +43,8 @@ chart.render();
  
 } */
 	
-	<div align="center">
-		<h2> Temperature </h2> <br><br>
-	</div>
+	<h2> TGemperature </h2> <br><br>
+
 	
 	var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
@@ -68,9 +67,9 @@ chart.render();
 	        br><br><br>
 	       
 	       
-	<div align="center">
+	
 		<h2> pH </h2> <br><br> 
-	       </div>
+	     
 	       
 	 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
