@@ -156,8 +156,8 @@ VALUES (?,?,?,?,?)";
         $params = array( &$_POST['fname'], &$_POST['lname'], &$_POST['email'] ,&$_POST['message']  , date("Y-m-d")
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
-               header('Location: test.php');
-exit;
+        header('Location: test.php');
+
         if ($stmt === false)  
             {  
             /*Handle the case of a duplicte e-mail address.*/  
