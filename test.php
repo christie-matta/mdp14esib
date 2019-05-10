@@ -16,6 +16,7 @@ $graph->setDataFormat('degrees');
 $graph->setGoalLine('32');
 $graph->setGoalLineColor('red');
 $graph->createGraph();
+return 1;
 ?>
 
 
