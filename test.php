@@ -1,6 +1,6 @@
 <?php
  
-$serverName = "tcp:servername.database.windows.net,1433";
+$serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionInfo = array( "Database"=>"DBName", "UID"=>"Username", "PWD"=>"Password");
 $conn = sqlsrv_connect( $serverName, $connectionInfo );
 if( $conn === false ) {
