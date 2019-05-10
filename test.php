@@ -49,7 +49,7 @@ chart.render();
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "Simple Line Chart"
+		text: "Temperature"
 	},
 	axisY:{
 		includeZero: false
@@ -67,7 +67,7 @@ chart.render();
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "Simple Line Chart"
+		text: "pH"
 	},
 	axisY:{
 		includeZero: false
@@ -90,9 +90,10 @@ chart.render();
 </head>
 <body>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+<div id="chartContainer1" style="height: 370px; width: 50%;"></div>
+	<br><br>
 
-<div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+<div id="chartContainer2" style="height: 370px; width: 50%;"></div>
 
 	
 </body>
