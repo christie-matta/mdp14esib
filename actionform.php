@@ -68,7 +68,7 @@
   <div class="alert alert-primary" role="alert">
   Message Sent !
 </div>  <br>
-   <img src="fish.png" class="img-fluid" alt="Responsive image">
+   <img src="fish.png" class="img-fluid" alt="Responsive image"></img>
 <?php  
 /*Connect using SQL Server authentication.*/  
 $serverName = "tcp:server-mdp.database.windows.net,1433";  
