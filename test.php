@@ -1,5 +1,5 @@
 <?php
-include('phpgraphlib.php');
+include('lib/phpgraphlib.php');
 $graph = new PHPGraphLib(450,300);
 $data = array("Jan" => -10.1, "Feb" => -3.6, "Mar" => 11.0, "Apr" => 30.7, 
 "May" => 48.6, "Jun" => 59.8, "Jul" => 62.5, "Aug" => 56.8, "Sep" => 45.5,
