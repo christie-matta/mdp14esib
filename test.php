@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("phpgraphlib.php");
 $graph = new PHPGraphLib(400,300);
 $data = array("Alex"=>99, "Mary"=>98, "Joan"=>70, "Ed"=>90);
