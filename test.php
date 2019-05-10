@@ -1,6 +1,5 @@
 <?php
-include("phpgraphlib.php");
-$graph=new PHPGraphLib(550,350); 
+ 
 
 $serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");
@@ -24,11 +23,7 @@ while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
 
 
 sqlsrv_free_stmt( $stmt);
-$graph->addData($dataArray);
-$graph->setTitle("Sales by Group");
-$graph->setGradient("lime", "green");
-$graph->setBarOutlineColor("black");
-$graph->createGraph();
+
 
 
 ?>
