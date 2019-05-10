@@ -1,4 +1,43 @@
 <?php
+
+$serverName = "tcp:servername.database.windows.net,1433";  
+
+$connectionOptions = array(  
+    "Database" => "DBName",  
+    "UID" => "Username",  
+    "PWD" => "Password"  
+);  
+
+$conn = sqlsrv_connect($serverName, $connectionOptions);  
+  
+if ($conn === false)  
+    {  
+    die(print_r(sqlsrv_errors() , true));  
+    }  
+
+$sql = "SELECT * FROM Graph"; 
+$stmt = sqlsrv_query($conn, $sql); 
+if($stmt === false) 
+{ 
+die(print_r(sqlsrv_errors(), true)); 
+} 
+ 
+if(sqlsrv_has_rows($stmt)) 
+{ 
+print("<table border='1px'>"); 
+print("<tr><td>Id</td>"); 
+print("<td>Val</td></tr>"); 
+ 
+while($row = sqlsrv_fetch_array($stmt)) 
+{ 
+ 
+print("<tr><td>".$row['id']."</td>"); 
+print("<td>".$row['val']."</td></tr>"); 
+} 
+ 
+print("</table>"); 
+}*
+
  
 $dataPoints = array(
 	array("label"=> 1997, "y"=> 254722.1),
