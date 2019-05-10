@@ -172,7 +172,7 @@ VALUES (?,?,?,?,?)";
             $errors = sqlsrv_errors();  
             if ($errors[0]['code'] == 2601)  
                 {  
-                 header('Location: ContactForm.php');
+                 header("Location: test.php");
                 echo " Success </br>";  
                exit;
                 }  
