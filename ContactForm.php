@@ -69,9 +69,17 @@
 Last Name : <input type="text" name="lname" id="lname"  class="form-control"/><te/br>  
 E-mail : <input type="text" name="email" id="email"  class="form-control"/></br>
 Message : <input type="text" name="message" id="message"  class="form-control" /></br>  <br>
-<input type="submit" name="submit" value="Submit" class="btn btn-primary btn-lg" justify-content="center"/>  
+<input type="submit" name="submit" value="Submit" onclick="return mess();" class="btn btn-primary btn-lg" justify-content="center"/>  
    <br><br>
 </form>  
+   
+   
+   <script type="text/javascript">
+      function mess()
+      {alert("your record is successfully saved!");
+       return true;
+      }
+   </script>
    
    <!--<form id="contactform" method="post" action="?action=add" enctype="multipart/form-data" >     
 <div>
@@ -156,7 +164,7 @@ VALUES (?,?,?,?,?)";
         $params = array( &$_POST['fname'], &$_POST['lname'], &$_POST['email'] ,&$_POST['message']  , date("Y-m-d")
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
-        header('Location: ContactForm.php');
+      
 
         if ($stmt === false)  
             {  
@@ -164,7 +172,9 @@ VALUES (?,?,?,?,?)";
             $errors = sqlsrv_errors();  
             if ($errors[0]['code'] == 2601)  
                 {  
+                 header('Location: ContactForm.php');
                 echo " Success </br>";  
+               exit;
                 }  
   
             /*Die if other errors occurred.*/  
