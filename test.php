@@ -13,7 +13,6 @@ try {
         array_push($dataPoints, array("x"=> $row->id, "y"=> $row->val));
     }
 	$link = null;
-
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
