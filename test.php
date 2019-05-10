@@ -60,7 +60,7 @@ chart.render();
 		
 	}]
 });
-//chart1.render();
+chart.render();
 
 
 	       	var chart = new CanvasJS.Chart("chartContainer2", {
@@ -79,11 +79,11 @@ chart.render();
 	}]
 });
 
+
 chart.render();
-chart.render();
+
 
 }
-
 	    	       
 	
 </script>
