@@ -43,7 +43,6 @@ chart.render();
  
 } */
 	
-	<h2> TGemperature </h2> <br><br>
 
 	
 	var chart = new CanvasJS.Chart("chartContainer", {
@@ -64,11 +63,10 @@ chart.render();
 chart.render();
 
 }
-	        br><br><br>
+	       
 	       
 	       
 	
-		<h2> pH </h2> <br><br> 
 	     
 	       
 	 var chart = new CanvasJS.Chart("chartContainer", {
