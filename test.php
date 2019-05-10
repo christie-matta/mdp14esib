@@ -45,7 +45,7 @@ chart.render();
 	
 
 	
-	var chart1 = new CanvasJS.Chart("chartContainer", {
+	var chart1 = new CanvasJS.Chart("chartContainer1", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
@@ -63,7 +63,7 @@ chart.render();
 //chart1.render();
 
 
-	       	var chart2 = new CanvasJS.Chart("chartContainer", {
+	       	var chart2 = new CanvasJS.Chart("chartContainer2", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
@@ -89,7 +89,10 @@ chart2.render();
 </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script
+<div id="chartContainer2" style="height: 370px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	
 </body>
 </html> 
