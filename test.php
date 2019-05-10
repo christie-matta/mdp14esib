@@ -5,7 +5,7 @@ $dataPoints = array();
 try {
     $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
     $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-    $handle = $conn->prepare('select id, val from Graph'); 
+    $handle = $conn->prepare('select id, val from Graph where id=2'); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
