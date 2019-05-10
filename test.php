@@ -2,17 +2,10 @@
  
 $dataPoints = array();
 //Best practice is to create a separate file for handling connection to database
-try{
-     // Creating a new connection.
-    // Replace your-hostname, your-db, your-username, your-password according to your database
-    $link = new \PDO(   'sqlsrv:server = tcp:server-mdp.database.windows.net,1433;Database = DB-MDP", "adminmdp", "p@ssw0rd",
-                        array(
-                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                            \PDO::ATTR_PERSISTENT => false
-                        )
-                    );
-	
-    $handle = $link->prepare('select id, val from Graph'); 
+try {
+    $conn = new PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "{your_password_here}");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	 $handle = $link->prepare('select id, val from Graph'); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
@@ -20,10 +13,16 @@ try{
         array_push($dataPoints, array("x"=> $row->id, "y"=> $row->val));
     }
 	$link = null;
+
 }
-catch(\PDOException $ex){
-    print($ex->getMessage());
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
 }
+
+	
+   
+
 	
 ?>
 <!DOCTYPE HTML>
