@@ -18,7 +18,7 @@ $connectionOptions = array(
 );  
 
 $conn = sqlsrv_connect($serverName, $connectionOptions); 
-  
+echo("<br> essai <br>");  
 $dataArray=array();
   
 //get data from database
