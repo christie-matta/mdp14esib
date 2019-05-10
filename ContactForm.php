@@ -41,14 +41,7 @@
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact us</a>
                     </li>
               </ul>
-            
-              
-
-
-
-
-   
-
+          
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-interval="500">
@@ -163,6 +156,8 @@ VALUES (?,?,?,?,?)";
         $params = array( &$_POST['fname'], &$_POST['lname'], &$_POST['email'] ,&$_POST['message']  , date("Y-m-d")
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
+               header('Location: test.php');
+exit;
         if ($stmt === false)  
             {  
             /*Handle the case of a duplicte e-mail address.*/  
@@ -214,15 +209,10 @@ VALUES (?,?,?,?,?)";
                   thea-rosette.khoury@net.usj.edu.lb<br>
 
               </p>
-    
-              
-    
             </div>
-            
-    
+   
             <hr class="clearfix w-100 d-md-none">
     
-           
             <div class="col-md-3 mx-auto">
                 <img src="esib.png"
     
@@ -232,26 +222,11 @@ VALUES (?,?,?,?,?)";
     
             <hr class="clearfix w-100 d-md-none">
     
-           
-          
-           
-    
+         
             <hr class="clearfix w-100 d-md-none">
     
-           
-           
-    
-    
         </div>
-        
-    
-       
      
-    
-      
-       
-       
-    
       </footer>
       
 </html>
