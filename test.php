@@ -42,6 +42,7 @@ window.onload = function () {
 chart.render();
  
 } */
+	
 	var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
@@ -72,7 +73,6 @@ chart.render();
 chart.render();
 
 }
-	
 	         
 		
 		
