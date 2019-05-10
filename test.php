@@ -63,33 +63,7 @@ chart.render();
 chart.render();
 
 }
-	       
-	       
-	       
 	
-	     
-	       
-	 var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	theme: "light2",
-	title:{
-		text: "Simple Line Chart"
-	},
-	axisY:{
-		includeZero: false
-	},
-	data: [{        
-		type: "line",
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-		
-	}]
-});
-chart.render();
-
-}
-	         
-		
-		
 </script>
 </head>
 <body>
