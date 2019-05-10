@@ -42,7 +42,7 @@
                     </li>
               </ul>
           
-        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+       <!-- <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-interval="500">
                     <img src="beach1.jpg" class="d-block w-100" alt="Beach Kfar Abida">
@@ -62,8 +62,10 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div>
-              <br><br>
+              </div> -->
+   
+   
+              <br><br> 
     
   <div class="alert alert-primary" role="alert">
   Message Sent !
