@@ -82,6 +82,7 @@ chart.render();
 chart.render();
 
 }
+	}
 	       
 	       
 	
