@@ -43,7 +43,36 @@ chart.render();
  
 } */
 	
+	<div align="center">
+		<h2> Temperature </h2> <br><br>
+	</div>
+	
 	var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "Simple Line Chart"
+	},
+	axisY:{
+		includeZero: false
+	},
+	data: [{        
+		type: "line",
+		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+		
+	}]
+});
+chart.render();
+
+}
+	        br><br><br>
+	       
+	       
+	<div align="center">
+		<h2> pH </h2> <br><br> 
+	       </div>
+	       
+	 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
