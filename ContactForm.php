@@ -159,8 +159,7 @@ if (isset($_GET['action']))
         /*Insert data.*/  
         $insertSql = "INSERT INTO ContactForm (form_fname,form_lname,form_email,form_message,form_date)   
 VALUES (?,?,?,?,?)";  
-            header('Location: test.php');
-exit;
+    
         $params = array( &$_POST['fname'], &$_POST['lname'], &$_POST['email'] ,&$_POST['message']  , date("Y-m-d")
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
