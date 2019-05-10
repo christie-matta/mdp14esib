@@ -90,10 +90,10 @@ chart.render();
 </head>
 <body>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<div id="chartContainer1" style="height: 370px; width: 50%;"></div>
+<div id="chartContainer1" style="height: 370px; width: 40%;"></div>
 	<br><br>
 
-<div id="chartContainer2" style="height: 370px; width: 50%;"></div>
+<div id="chartContainer2" style="height: 370px; width: 40%;"></div>
 
 	
 </body>
