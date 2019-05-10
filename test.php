@@ -5,7 +5,7 @@ $dataPoints = array();
 try{
      // Creating a new connection.
     // Replace your-hostname, your-db, your-username, your-password according to your database
-    $link = new \PDO(   'sql:host=tcp:server-mdp.database.windows.net,1433;dbname=DB-MDP;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+    $link = new \PDO(   'tcp:server-mdp.database.windows.net,1433;DB-MDP;utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
                         'adminmdp', //'root',
                         'p@ssw0rd', //'',
                         array(
