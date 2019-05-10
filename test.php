@@ -19,7 +19,7 @@ while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
 	$id=$row["id"];
       $val=$row["val"];
 	$dataArray[$id]=$val;
-      //echo $row['id'].", ".$row['val']."<br />";
+      echo $row['id'].", ".$row['val']."<br />";
 	
   
 }
