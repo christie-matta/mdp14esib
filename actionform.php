@@ -114,4 +114,50 @@ VALUES (?,?,?,?,?)";
   
     }  
   ?>
+</body>
+
+
+<footer class="page-footer font-small teal pt-4" style="background-color: #2650D1; color:white">
+<!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+        
+        <div class="container text-center text-md-left">
+    
+          
+          <div class="row">
+    
+            <div class="col-md-3 mx-auto">
+    
+            
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Our coordinates</h5>
+              <p> For further information, you can contact: <br>
+
+                  romy.charbel@net.usj.edu.lb<br>
+                  christie.matta@net.usj.edu.lb<br>
+                  berthe.hajjar@net.usj.edu.lb<br>
+                  mira.abiakl@net.usj.edu.lb<br>
+                  thea-rosette.khoury@net.usj.edu.lb<br>
+
+              </p>
+            </div>
+   
+            <hr class="clearfix w-100 d-md-none">
+    
+            <div class="col-md-3 mx-auto">
+                <img src="esib.png"
+    
+    
+            </div>
+            
+    
+            <hr class="clearfix w-100 d-md-none">
+    
+         
+            <hr class="clearfix w-100 d-md-none">
+    
+        </div>
+     
+      </footer>
+      
 </html>
