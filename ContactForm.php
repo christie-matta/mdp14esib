@@ -172,9 +172,9 @@ VALUES (?,?,?,?,?)";
             $errors = sqlsrv_errors();  
             if ($errors[0]['code'] == 2601)  
                 {  
-                 header("Location: test.php");
+                 
                 echo " Success </br>";  
-               exit;
+              
                 }  
   
             /*Die if other errors occurred.*/  
@@ -186,6 +186,8 @@ VALUES (?,?,?,?,?)";
           else  
             {  
             echo "Message sent </br>";  
+             header("Location: test.php");
+             exit;
             }  
   
         }  
