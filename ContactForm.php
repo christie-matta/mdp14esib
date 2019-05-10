@@ -156,7 +156,7 @@ VALUES (?,?,?,?,?)";
         $params = array( &$_POST['fname'], &$_POST['lname'], &$_POST['email'] ,&$_POST['message']  , date("Y-m-d")
         );  
         $stmt = sqlsrv_query($conn, $insertSql, $params);  
-        header('Location: test.php');
+        header('Location: ContactForm.php');
 
         if ($stmt === false)  
             {  
