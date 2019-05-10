@@ -27,7 +27,7 @@ catch (PDOException $e) {
 <script>
 window.onload = function () {
  
-var chart = new CanvasJS.Chart("chartContainer", {
+/*var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	exportEnabled: true,
 	theme: "light1", // "light1", "light2", "dark1", "dark2"
@@ -38,10 +38,47 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		type: "column", //change type to bar, line, area, pie, etc  
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
+}); -->
+chart.render();
+ 
+} */
+	
+	var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Stock Price of BMW - August"
+	},
+	axisX:{
+		valueFormatString: "DD MMM",
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true
+		}
+	},
+	axisY: {
+		title: "Closing Price (in USD)",
+		includeZero: false,
+		valueFormatString: "$##0.00",
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true,
+			labelFormatter: function(e) {
+				return "$" + CanvasJS.formatNumber(e.value, "##0.00");
+			}
+		}
+	},
+	data: [{
+		type: "area",
+		xValueFormatString: "DD MMM",
+		yValueFormatString: "$##0.00",
+		
+		}]
 });
 chart.render();
  
-}
+}              
+		
+		
 </script>
 </head>
 <body>
