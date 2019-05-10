@@ -3,9 +3,9 @@
 $dataPoints = array();
 //Best practice is to create a separate file for handling connection to database
 try {
-    $conn = new PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	 $handle = $conn->prepare('select id, val from Graph'); 
+    $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
+    $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+    $handle = $conn->prepare('select id, val from Graph'); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
@@ -18,9 +18,6 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-
-	
-   
 
 	
 ?>
