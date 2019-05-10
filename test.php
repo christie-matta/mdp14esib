@@ -1,31 +1,32 @@
 <?php
  
-
-$serverName = "tcp:server-mdp.database.windows.net,1433";
-$connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");
-$conn = sqlsrv_connect( $serverName, $connectionInfo );
-if( $conn === false ) {
-    die( print_r( sqlsrv_errors(), true));
+$dataPoints = array();
+//Best practice is to create a separate file for handling connection to database
+try{
+     // Creating a new connection.
+    // Replace your-hostname, your-db, your-username, your-password according to your database
+    $link = new \PDO(   'sql:host=tcp:server-mdp.database.windows.net,1433;dbname=DB-MDP;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
+                        'adminmdp', //'root',
+                        'p@ssw0rd', //'',
+                        array(
+                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                            \PDO::ATTR_PERSISTENT => false
+                        )
+                    );
+	
+    $handle = $link->prepare('select id, val from Graph'); 
+    $handle->execute(); 
+    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+		
+    foreach($result as $row){
+        array_push($dataPoints, array("x"=> $row->id, "y"=> $row->val));
+    }
+	$link = null;
 }
-$dataArray=array();
-$sql = "SELECT id, val FROM Graph";
-$stmt = sqlsrv_query( $conn, $sql );
-if( $stmt === false) {
-    die( print_r( sqlsrv_errors(), true) );
+catch(\PDOException $ex){
+    print($ex->getMessage());
 }
-
-while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-	$id=$row["id"];
-      $val=$row["val"];
-	$dataArray[$id]=$val;
-      echo $row['id'].", ".$row['val']."<br />";
-}
-
-
-sqlsrv_free_stmt( $stmt);
-
-
-
+	
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -42,7 +43,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "column", //change type to bar, line, area, pie, etc  
-		dataArray: <?php echo json_encode($dataArray, JSON_NUMERIC_CHECK); ?>
+		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 	}]
 });
 chart.render();
@@ -54,4 +55,67 @@ chart.render();
 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
-</html>    
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
