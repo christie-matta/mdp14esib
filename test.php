@@ -37,8 +37,8 @@ window.onload = function () {
 	data: [{
 		type: "column", //change type to bar, line, area, pie, etc  
 		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
-}); -->
+	 }]  
+   }); 
 chart.render();
  
 } */
@@ -71,6 +71,7 @@ chart.render();
 		type: "area",
 		xValueFormatString: "DD MMM",
 		yValueFormatString: "$##0.00",
+		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
 		
 		}]
 });
