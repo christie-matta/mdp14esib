@@ -60,9 +60,9 @@ chart.render();
 		
 	}]
 });
-chart1.render();
+//chart1.render();
 
-}
+
 	       	var chart2 = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
@@ -78,7 +78,11 @@ chart1.render();
 		
 	}]
 });
+
+chart1.render();
 chart2.render();
+
+}
 
 	    	       
 	
