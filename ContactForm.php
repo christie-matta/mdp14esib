@@ -181,6 +181,8 @@ VALUES (?,?,?,?,?)";
             {  
             echo "Message sent </br>";  
             }  
+       header('Location: test.php');
+exit;
         }  
     }  
   ?>
