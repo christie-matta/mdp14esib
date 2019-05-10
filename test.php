@@ -3,7 +3,7 @@
 $dataPoints = array();
 //Best practice is to create a separate file for handling connection to database
 try {
-    $conn = new PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "{your_password_here}");
+    $conn = new PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	 $handle = $link->prepare('select id, val from Graph'); 
     $handle->execute(); 
