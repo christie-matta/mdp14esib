@@ -45,7 +45,7 @@ chart.render();
 	
 
 	
-	var chart = new CanvasJS.Chart("chartContainer", {
+	var chart1 = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
@@ -60,9 +60,26 @@ chart.render();
 		
 	}]
 });
-chart.render();
+chart1.render();
 
 }
+	       	var chart2 = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "Simple Line Chart"
+	},
+	axisY:{
+		includeZero: false
+	},
+	data: [{        
+		type: "line",
+		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+		
+	}]
+});
+chart2.render();
+
 	    	       
 	
 </script>
