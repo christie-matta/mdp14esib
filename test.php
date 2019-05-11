@@ -29,32 +29,26 @@ catch (PDOException $e) {
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-	
-
-	
-
-
-	
 <br>
-	
-	<input type="text" name="datetimes" />
+	<input type="text" name="birthday" value="10/24/1984" />
 
 <script>
 $(function() {
-  $('input[name="datetimes"]').daterangepicker({
-    timePicker: true,
-    startDate: moment().startOf('hour'),
-    endDate: moment().startOf('hour').add(32, 'hour'),
-    locale: {
-      format: 'M/DD hh:mm A'
-    }
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+    alert("You are " + years + " years old!");
   });
 });
 </script>
-	<br>
+	
 
-	<input type="text" name="datetimes" />
-
+<input type="text" name="datetimes" />
+	
 <script>
 $(function() {
   $('input[name="datetimes"]').daterangepicker({
