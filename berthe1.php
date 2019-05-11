@@ -8,9 +8,7 @@ try {
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
-    foreach($result as $row){
-        array_push($dataPoints, array("x"=> $row->id, "y"=> $row->val));
-    }
+  
 	$link = null;
 }
 catch (PDOException $e) {
