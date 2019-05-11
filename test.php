@@ -28,9 +28,8 @@ catch (PDOException $e) {
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
-<!--<input type="text" name="birthday" value="10/24/1984" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />-
+<input type="text" name="birthday" value="10/24/1984" />
 <script>
 $(function() {
   $('input[name="birthday"]').daterangepicker({
@@ -43,10 +42,9 @@ $(function() {
     alert("You are " + years + " years old!");
   });
 });
-</script>-->
+</script>
 	
-
-<!--<input type="text" name="datetimes" />
+<input type="text" name="datetimes" />
 <script>
 $(function() {
   $('input[name="datetimes"]').daterangepicker({
@@ -58,7 +56,7 @@ $(function() {
     }
   });
 });
-</script>-->
+</script>
 
 	
 <script>
@@ -79,58 +77,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
 chart.render();
  
 } 
-	
-/*
-	
-	var chart = new CanvasJS.Chart("chartContainer1", {
-	animationEnabled: true,
-	theme: "light2",
-	title:{
-		text: "Temperature"
-	},
-	axisY:{
-		includeZero: false
-	},
-	data: [{        
-		type: "line",
-		dataPoints: 
-		
-	}]
-});
-chart.render();
 
-
-	       	var chart = new CanvasJS.Chart("chartContainer2", {
-	animationEnabled: true,
-	theme: "light2",
-	title:{
-		text: "pH"
-	},
-	axisY:{
-		includeZero: false
-	},
-	data: [{        
-		type: "line",
-		dataPoints:
-		
-	}]
-});
-
-
-chart.render();
-}
-*/
-	    	       
-	
 </script>
 </head>
 <body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<div id="chartContainer" style="height: 370px; width: 40%;"></div>
-	<br><br>
-
-<!--<div id="chartContainer2" style="height: 370px; width: 40%;"></div>-->
-
-	
 </body>
-</html> 
+</html>
