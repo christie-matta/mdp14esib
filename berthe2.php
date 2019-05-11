@@ -1,5 +1,7 @@
 <?php
 
+if(isset($_POST["from_date"], $_POST["to_date"])) 
+{
   /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
 $serverName = "tcp:server-mdp.database.windows.net,1433";
@@ -25,11 +27,39 @@ if( $stmt === false)
      die( print_r( sqlsrv_errors(), true));  
 }  
 	
-	  while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
-	  {
-	  echo  "hi"; 
-	  }
-	
+	  $output .= ' 
+	  <table class="table table-bordered">  
+                <tr> 
+                     <th width="5%">ID</th>  
+                     <th width="30%">Value</th>   
+                     <th width="12%">Date</th>  
+                </tr>  
+      ';
+	 if(sqlsrv_num_rows($stmt) > 0)
+    {
+        while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
+        {
+		echo $row['id'].", ".$row['val']."\n";  
+            $output .= '  
+                     <tr>  
+                          <td>'. $row["id"] .'</td>  
+                          <td>'. $row["val"] .'</td>  
+                   
+                          <td>'. $row["datee"] .'</td>  
+                     </tr>  
+                ';
+        }
+    }
+    else
+    {
+        $output .= '  
+                <tr>  
+                     <td colspan="5">No Order Found</td>  
+                </tr>  
+           ';
+    }
+    $output .= '</table>';
+   
   
 
   
@@ -37,4 +67,7 @@ if( $stmt === false)
 sqlsrv_free_stmt( $stmt);  
 sqlsrv_close( $conn);
 
+ echo $output;
+
+}
 ?>
