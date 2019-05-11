@@ -55,9 +55,9 @@ sqlsrv_free_stmt( $stmt);
             while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
                 ?>
                 <tr>
-                    <td><?php echo $row["graph_id"]; ?></td>
-                    <td><?php echo $row["graph_val"]; ?></td>
-                    <td><?php echo $row["graph_date"]; ?></td>
+                    <td><?php echo $row["id"]; ?></td>
+                    <td><?php echo $row["val"]; ?></td>
+                    <td><?php echo $row["datee"]; ?></td>
                 </tr>
                 <?php
             }
