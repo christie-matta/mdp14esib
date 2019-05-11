@@ -5,7 +5,7 @@ if(isset($_POST["from_date"], $_POST["to_date"]))
    $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
     $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
   $output = '';
-    $handle = $conn->prepare('select * FROM Graph  WHERE order_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."' ); 
+    $handle = $conn->prepare('select * FROM Graph  WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."' ); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		 
