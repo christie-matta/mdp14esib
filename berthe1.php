@@ -1,21 +1,4 @@
 
-<?php
-$serverName = "tcp:server-mdp.database.windows.net,1433";
-$connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");
-$conn = sqlsrv_connect( $serverName, $connectionInfo );
-if( $conn === false ) {
-    die( print_r( sqlsrv_errors(), true));
-}
-
-$sql = "SELECT * FROM Graph";
-$stmt = sqlsrv_query( $conn, $sql );
-if( $stmt === false) {
-    die( print_r( sqlsrv_errors(), true) );
-}
-sqlsrv_free_stmt( $stmt);
-?>
-
-
 
 
 <!DOCTYPE html>
@@ -67,34 +50,4 @@ sqlsrv_free_stmt( $stmt);
 </div>
 </body>
 </html>
-<script>
-    $(document).ready(function(){
-        $.datepicker.setDefaults({
-            dateFormat: 'yy-mm-dd'
-        });
-        $(function(){
-            $("#from_date").datepicker();
-            $("#to_date").datepicker();
-        });
-        $('#filter').click(function(){
-            var from_date = $('#from_date').val();
-            var to_date = $('#to_date').val();
-            if(from_date != '' && to_date != '')
-            {
-                $.ajax({
-                    url:"filter.php",
-                    method:"POST",
-                    data:{from_date:from_date, to_date:to_date},
-                    success:function(data)
-                    {
-                        $('#order_table').html(data);
-                    }
-                });
-            }
-            else
-            {
-                alert("Please Select Date");
-            }
-        });
-    });
-</script>
+
