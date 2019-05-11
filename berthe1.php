@@ -97,6 +97,7 @@ if( $stmt === false)
                     data:{from_date:from_date, to_date:to_date},
                     success:function(data)
                     {
+			    print("hihih");
                         $('#order_table').html(data);
                     }
                 });
