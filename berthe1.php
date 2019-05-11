@@ -28,7 +28,9 @@ if( $stmt === false)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
 <body>
 <br /><br />
@@ -46,7 +48,29 @@ if( $stmt === false)
     </div>
     <div style="clear:both"></div>
     <br />
-   <!--hon-->
+   <div id="graph_table">  
+        <table class="table table-bordered">
+            <tr>
+                <th width="5%">ID</th>
+                <th width="30%">Value</th>
+                <th width="12%"> Date</th>
+            </tr>
+            <?php
+            
+            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+		 //   echo "fetet la hon ";
+                ?>
+                <tr>
+                    <td><?php echo $row["id"]; ?></td>
+                    <td><?php echo $row["val"]; ?></td>
+                    <td><?php echo $row["datee"]; ?></td>
+                </tr>
+                <?php
+            }
+            ?>
+          
+        </table>
+    </div>
 </div>
 	<script type="text/javascript">
       function mess()
