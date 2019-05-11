@@ -15,9 +15,9 @@ if( $conn === false )
 	}
    $output = '';
  
-/* Set up and execute the query.       WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."  */  
-$sql = "SELECT * FROM Graph ;'  
-      ";  
+/* Set up and execute the query.       WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."  ";  */  
+$sql = "SELECT * FROM Graph ;
+      
 $stmt = sqlsrv_query( $conn, $sql);  
 if( $stmt === false)  
 {  
