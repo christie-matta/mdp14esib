@@ -38,7 +38,7 @@ catch (PDOException $e) {
         <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />
     </div>
     <div class="col-md-5">
-        <input type="button" name="filter" id="filter" value="Filter" class="btn btn-info" />
+        <input type="button" name="filter" id="filter" value="Filter" onclick="return mess();" class="btn btn-info" />
     </div>
     <div style="clear:both"></div>
     <br />
@@ -67,7 +67,13 @@ catch (PDOException $e) {
 </div>
 </body>
 </html>
-
+<script type="text/javascript">
+      function mess()
+      {alert("Your message is valid !");
+       return true;
+      }
+   </script>
+   
 
 <script>
     $(document).ready(function(){
