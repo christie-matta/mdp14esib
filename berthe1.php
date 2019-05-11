@@ -1,19 +1,22 @@
 
 <?php
-$serverName = "tcp:server-mdp.database.windows.net,1433";
-$connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");
-$conn = sqlsrv_connect( $serverName, $connectionInfo );
-if( $conn === false ) {
-   // die( print_r( sqlsrv_errors(), true));
-    echo "hello";
+$dataPoints = array();
+try {
+    $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
+    $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+    $handle = $conn->prepare('select * FROM Graph '); 
+    $handle->execute(); 
+    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+		
+    foreach($result as $row){
+        array_push($dataPoints, array("x"=> $row->id, "y"=> $row->val));
+    }
+	$link = null;
 }
-
-$sql = "SELECT * FROM Graph";
-$stmt = sqlsrv_query( $conn, $sql );
-if( $stmt === false) {
-    die( print_r( sqlsrv_errors(), true) );
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
 }
-sqlsrv_free_stmt( $stmt);
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +53,7 @@ sqlsrv_free_stmt( $stmt);
             </tr>
             <?php
             
-            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+            while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
                 ?>
                 <tr>
                     <td><?php echo $row["id"]; ?></td>
