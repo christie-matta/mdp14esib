@@ -36,7 +36,9 @@ catch (PDOException $e) {
 
 	
 <br><br>
-	input type="text" name="datetimes" />
+
+	<input type="text" name="datetimes" />
+
 <script>
 $(function() {
   $('input[name="datetimes"]').daterangepicker({
