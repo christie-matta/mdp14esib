@@ -44,11 +44,25 @@ $(function() {
     maxYear: parseInt(moment().format('YYYY'),10)
   }, function(start, end, label) {
     var years = moment().diff(start, 'years');
-    alert("You are " + years + " years old!");
+    alert("Your selection was good ! "  );
   });
 });
 </script>
 	
+<br><br>
+	input type="text" name="datetimes" />
+<script>
+$(function() {
+  $('input[name="datetimes"]').daterangepicker({
+    timePicker: true,
+    startDate: moment().startOf('hour'),
+    endDate: moment().startOf('hour').add(32, 'hour'),
+    locale: {
+      format: 'M/DD hh:mm A'
+    }
+  });
+});
+</script>
 
 	
 <script>
