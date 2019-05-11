@@ -70,12 +70,9 @@ catch (PDOException $e) {
       {alert("Excellent ! now wait for your
       }
    </script>
-</body>
-</html>
-
-   
-
-<script>
+	
+	
+	<script>
     $(document).ready(function(){
         $.datepicker.setDefaults({
             dateFormat: 'yy-mm-dd'
@@ -106,6 +103,14 @@ catch (PDOException $e) {
         });
     });
 </script>
+	
+	
+</body>
+</html>
+
+   
+
+
 
 
 
