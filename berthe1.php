@@ -48,7 +48,7 @@ if( $stmt === false)
         <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />
     </div>
     <div class="col-md-5">
-        <input type="button" name="filter" id="filter" value="Filter" onclick="return mess();" class="btn btn-info" />
+        <input type="button" name="filter" id="filter" value="Filter"  class="btn btn-info" />
     </div>
     <div style="clear:both"></div>
     <br />
