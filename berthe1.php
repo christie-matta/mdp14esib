@@ -9,7 +9,7 @@ if( $conn === false )
      die( print_r( sqlsrv_errors(), true));  
 }
 	else {
-		 echo "connection successful .\n"; 
+		 echo "connection successful here .\n"; 
 	}
 $query="SELECT * FROM Graph ";
 $stmt = sqlsrv_query( $conn, $query);  
