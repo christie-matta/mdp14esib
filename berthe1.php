@@ -45,7 +45,7 @@ sqlsrv_free_stmt( $stmt);
             <tr>
                 <th width="5%">ID</th>
                 <th width="30%">Value</th>
-                <th width="12%">Order Date</th>
+                <th width="12%"> Date</th>
             </tr>
             <?php
             
