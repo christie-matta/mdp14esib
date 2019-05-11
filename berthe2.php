@@ -34,7 +34,7 @@ if( $stmt === false)
                      <th width="12%">Order Date</th>  
                 </tr>  
       ';
-	 if(sqlsrv_num_rows($result) > 0)
+	 if(sqlsrv_num_rows($stmt) > 0)
     {
         while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
         {
