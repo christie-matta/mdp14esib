@@ -33,21 +33,7 @@ catch (PDOException $e) {
 
 	
 
-	
-	<input type="text" name="birthday" value="10/24/1984" />
-<script>
-$(function() {
-  $('input[name="birthday"]').daterangepicker({
-    singleDatePicker: true,
-    showDropdowns: true,
-    minYear: 1901,
-    maxYear: parseInt(moment().format('YYYY'),10)
-  }, function(start, end, label) {
-    var years = moment().diff(start, 'years');
-    alert("Your selection was good ! "  );
-  });
-});
-</script>
+
 	
 <br><br>
 	input type="text" name="datetimes" />
