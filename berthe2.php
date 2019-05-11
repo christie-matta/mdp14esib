@@ -27,9 +27,7 @@ if( $stmt === false)
 	  <table class="table table-bordered">  
                 <tr>  
                      <th width="5%">ID</th>  
-                     <th width="30%">Customer Name</th>  
-                     <th width="43%">Item</th>  
-                     <th width="10%">Value</th>  
+                     <th width="30%">Customer Name</th>   
                      <th width="12%">Order Date</th>  
                 </tr>  
       ';
@@ -40,11 +38,10 @@ if( $stmt === false)
 		echo $row['id'].", ".$row['val']."\n";  
             $output .= '  
                      <tr>  
-                          <td>'. $row["order_id"] .'</td>  
-                          <td>'. $row["order_customer_name"] .'</td>  
-                          <td>'. $row["order_item"] .'</td>  
-                          <td>$ '. $row["order_value"] .'</td>  
-                          <td>'. $row["order_date"] .'</td>  
+                          <td>'. $row["id"] .'</td>  
+                          <td>'. $row["val"] .'</td>  
+                   
+                          <td>'. $row["datee"] .'</td>  
                      </tr>  
                 ';
         }
