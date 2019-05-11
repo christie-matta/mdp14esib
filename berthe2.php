@@ -17,7 +17,7 @@ $result = sqlsrv_query( $connect,$query );
                      <th width="5%">ID</th>  
                      <th width="30%">value</th>  
                        
-                     <th width="12%">Order Date</th>  
+                     <th width="12%"> Date</th>  
                 </tr>  
       ';    
     if(sqlsrv_num_rows($result) > 0)
