@@ -28,7 +28,7 @@ if( $stmt === false)
 }  
 	 $output .= ' 
 	  <table class="table table-bordered">  
-                <tr>  
+                <tr> 
                      <th width="5%">ID</th>  
                      <th width="30%">Customer Name</th>   
                      <th width="12%">Order Date</th>  
