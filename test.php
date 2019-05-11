@@ -30,7 +30,7 @@ catch (PDOException $e) {
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-<input type="text" name="birthday" value="10/24/1984" />
+<!--<input type="text" name="birthday" value="10/24/1984" />
 <script>
 $(function() {
   $('input[name="birthday"]').daterangepicker({
@@ -43,10 +43,10 @@ $(function() {
     alert("You are " + years + " years old!");
   });
 });
-</script>
+</script>-->
 	
-<br><br>
-<input type="text" name="datetimes" />
+
+<!--<input type="text" name="datetimes" />
 <script>
 $(function() {
   $('input[name="datetimes"]').daterangepicker({
@@ -58,7 +58,7 @@ $(function() {
     }
   });
 });
-</script>
+</script>-->
 
 	
 <script>
@@ -93,7 +93,7 @@ chart.render();
 	},
 	data: [{        
 		type: "line",
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+		dataPoints: 
 		
 	}]
 });
@@ -111,7 +111,7 @@ chart.render();
 	},
 	data: [{        
 		type: "line",
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+		dataPoints:
 		
 	}]
 });
