@@ -65,14 +65,15 @@ catch (PDOException $e) {
         </table>
     </div>
 </div>
-</body>
-</html>
-<script type="text/javascript">
+	<script type="text/javascript">
       function mess()
       {alert("Your message is valid !");
        return true;
       }
    </script>
+</body>
+</html>
+
    
 
 <script>
