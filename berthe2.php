@@ -26,10 +26,10 @@ $result = sqlsrv_query( $connect,$query );
         {
             $output .= '  
                      <tr>  
-                          <td>'. $row["graph_id"] .'</td>  
+                          <td>'. $row["id"] .'</td>  
                         
-                          <td>$ '. $row["graph_value"] .'</td>  
-                          <td>'. $row["graph_date"] .'</td>  
+                          <td>$ '. $row["val"] .'</td>  
+                          <td>'. $row["datee"] .'</td>  
                      </tr>  
                 ';
         }
