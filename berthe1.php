@@ -33,18 +33,8 @@
                 <th width="30%">Value</th>
                 <th width="12%">Order Date</th>
             </tr>
-            <?php
-            
-            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-                ?>
-                <tr>
-                    <td><?php echo $row["id"]; ?></td>
-                    <td><?php echo $row["val"]; ?></td>
-                    <td><?php echo $row["datee"]; ?></td>
-                </tr>
-                <?php
-            }
-            ?>
+            <!--hon bde zid -->
+          
         </table>
     </div>
 </div>
