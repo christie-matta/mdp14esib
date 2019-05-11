@@ -7,7 +7,7 @@ try {
     $handle = $conn->prepare('select * FROM Graph '); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
-		
+	print(" connecting to SQL Server was a success");	
   
 	$link = null;
 }
