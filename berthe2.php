@@ -2,7 +2,7 @@
 
   /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
-$serverName = "tcp:server-mdp.database.windows.net,1433";;  
+$serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
 if( $conn === false )  
@@ -13,7 +13,7 @@ if( $conn === false )
 	else {
 		 echo "connection successful .\n"; 
 	}
-   $output = '';
+  // $output = '';
  
 /* Set up and execute the query.       WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."  ";  */  
 $sql = "SELECT * FROM Graph ;
@@ -27,7 +27,8 @@ if( $stmt === false)
 	
 	  while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
 	  {
-	  echo  $row["id"]; }
+	  echo  $row["id"]; 
+	  }
 	
   
 
