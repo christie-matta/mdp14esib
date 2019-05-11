@@ -27,7 +27,7 @@ if( $stmt === false)
 	
 	  while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
 	  {
-	  echo  $row["id"]; 
+	  echo  "hi"; 
 	  }
 	
   
