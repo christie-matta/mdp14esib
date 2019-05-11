@@ -30,8 +30,8 @@ if( $stmt === false)
 	  <table class="table table-bordered">  
                 <tr> 
                      <th width="5%">ID</th>  
-                     <th width="30%">Customer Name</th>   
-                     <th width="12%">Order Date</th>  
+                     <th width="30%">Value</th>   
+                     <th width="12%">Date</th>  
                 </tr>  
       ';
 	 if(sqlsrv_num_rows($stmt) > 0)
