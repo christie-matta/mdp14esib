@@ -56,7 +56,7 @@ if( $stmt === false)
             <?php
             
             while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-		    echo "fetet la hon ";
+		 //   echo "fetet la hon ";
                 ?>
                 <tr>
                     <td><?php echo $row["id"]; ?></td>
