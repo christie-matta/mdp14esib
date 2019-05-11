@@ -18,7 +18,7 @@ sqlsrv_free_stmt( $stmt);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Know More Information About Temperature and pH </title>
+    <title>Kfaraabida  </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -27,7 +27,7 @@ sqlsrv_free_stmt( $stmt);
 <body>
 <br /><br />
 <div class="container" style="width:900px;">
-    <h2 align="center">Ajax PHP MySQL Date Range Search using jQuery DatePicker</h2>
+    <h2 align="center">Information About Temperature & pH !</h2>
     <h3 align="center">Graph Data</h3><br />
     <div class="col-md-3">
         <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />
