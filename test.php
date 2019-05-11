@@ -35,7 +35,23 @@ catch (PDOException $e) {
 
 
 	
-<br><br>
+<br>
+	
+	<input type="text" name="datetimes" />
+
+<script>
+$(function() {
+  $('input[name="datetimes"]').daterangepicker({
+    timePicker: true,
+    startDate: moment().startOf('hour'),
+    endDate: moment().startOf('hour').add(32, 'hour'),
+    locale: {
+      format: 'M/DD hh:mm A'
+    }
+  });
+});
+</script>
+	<br>
 
 	<input type="text" name="datetimes" />
 
