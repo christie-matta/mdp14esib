@@ -46,29 +46,7 @@ if( $stmt === false)
     </div>
     <div style="clear:both"></div>
     <br />
-    <div id="graph_table">  
-        <table class="table table-bordered">
-            <tr>
-                <th width="5%">ID</th>
-                <th width="30%">Value</th>
-                <th width="12%"> Date</th>
-            </tr>
-            <?php
-            
-            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-		 //   echo "fetet la hon ";
-                ?>
-                <tr>
-                    <td><?php echo $row["id"]; ?></td>
-                    <td><?php echo $row["val"]; ?></td>
-                    <td><?php echo $row["datee"]; ?></td>
-                </tr>
-                <?php
-            }
-            ?>
-          
-        </table>
-    </div>
+   <!--hon-->
 </div>
 	<script type="text/javascript">
       function mess()
