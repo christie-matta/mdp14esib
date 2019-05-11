@@ -76,13 +76,6 @@ if( $stmt === false)
         </table>
     </div>
 </div>
-	<script type="text/javascript">
-      function mess()
-      {alert("Excellent ! now wait for your
-      }
-   </script>
-	
-	
 	
 	
 	<script>
