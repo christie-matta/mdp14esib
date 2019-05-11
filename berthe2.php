@@ -11,7 +11,10 @@ if( $conn === false )
 {  
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
-}  
+}
+	else {
+		 echo "connection successful .\n"; 
+	}
    $output = '';
  
 /* Set up and execute the query. */  
