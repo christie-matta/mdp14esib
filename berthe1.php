@@ -76,6 +76,10 @@ if( $stmt === false)
         </table>
     </div>
 </div>
+	</body>
+</html>
+
+   
 	
 	
 	<script>
@@ -113,10 +117,7 @@ if( $stmt === false)
 </script>
 	
 	
-</body>
-</html>
 
-   
 
 
 
