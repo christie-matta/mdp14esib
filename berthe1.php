@@ -67,8 +67,7 @@ catch (PDOException $e) {
 </div>
 	<script type="text/javascript">
       function mess()
-      {alert("Your message is valid !");
-       return true;
+      {alert("Excellent ! now wait for your
       }
    </script>
 </body>
