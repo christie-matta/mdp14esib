@@ -87,7 +87,7 @@ catch (PDOException $e) {
             if(from_date != '' && to_date != '')
             {alert("you ve just entered");
                 $.ajax({
-                    url:"berthe2.php",
+                    url:"https://github.com/christie-matta/mdp14esib/blob/master/berthe2.php",
                     method:"POST",
                     data:{from_date:from_date, to_date:to_date},
                     success:function(data)
