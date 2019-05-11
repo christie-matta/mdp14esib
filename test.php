@@ -80,7 +80,7 @@ chart.render();
  
 } */
 	
-
+<br><br>
 	
 	var chart = new CanvasJS.Chart("chartContainer1", {
 	animationEnabled: true,
