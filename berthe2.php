@@ -1,7 +1,5 @@
 <?php
 
-if(isset($_POST["from_date"], $_POST["to_date"])) 
-{
   /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
 $serverName = "tcp:server-mdp.database.windows.net,1433";;  
@@ -37,5 +35,5 @@ if( $stmt === false)
 /* Free statement and connection resources. */  
 sqlsrv_free_stmt( $stmt);  
 sqlsrv_close( $conn);
-}
+
 ?>
