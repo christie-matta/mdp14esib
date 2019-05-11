@@ -2,34 +2,49 @@
 
 if(isset($_POST["from_date"], $_POST["to_date"])) 
 {
-   $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
-    $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-  $output = '';
-    $handle = $conn->prepare('select * FROM Graph  WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."' ); 
-    $handle->execute(); 
-    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
-		 
-  
-  
-    $output .= '  
-       <table class="table table-bordered">  
+  /* Connect to the local server using Windows Authentication and  
+specify the AdventureWorks database as the database in use. */  
+$serverName = "tcp:server-mdp.database.windows.net,1433";;  
+$connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");  
+$conn = sqlsrv_connect( $serverName, $connectionInfo);  
+if( $conn === false )  
+{  
+     echo "Could not connect.\n";  
+     die( print_r( sqlsrv_errors(), true));  
+}  
+   $output = '';
+ 
+/* Set up and execute the query. */  
+$sql = "SELECT * FROM Graph WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'  
+      ";  
+$stmt = sqlsrv_query( $conn, $sql);  
+if( $stmt === false)  
+{  
+     echo "Error in query preparation/execution.\n";  
+     die( print_r( sqlsrv_errors(), true));  
+}  
+	 $output .= ' 
+	  <table class="table table-bordered">  
                 <tr>  
                      <th width="5%">ID</th>  
-                     <th width="30%">value</th>  
-                       
-                     <th width="12%"> Date</th>  
+                     <th width="30%">Customer Name</th>  
+                     <th width="43%">Item</th>  
+                     <th width="10%">Value</th>  
+                     <th width="12%">Order Date</th>  
                 </tr>  
-      ';    
-    if(sqlsrv_num_rows($result) > 0)
+      ';
+	 if(sqlsrv_num_rows($result) > 0)
     {
-        while($row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC))
+        while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
         {
+		echo $row['id'].", ".$row['val']."\n";  
             $output .= '  
                      <tr>  
-                          <td>'. $row["id"] .'</td>  
-                        
-                          <td>$ '. $row["val"] .'</td>  
-                          <td>'. $row["datee"] .'</td>  
+                          <td>'. $row["order_id"] .'</td>  
+                          <td>'. $row["order_customer_name"] .'</td>  
+                          <td>'. $row["order_item"] .'</td>  
+                          <td>$ '. $row["order_value"] .'</td>  
+                          <td>'. $row["order_date"] .'</td>  
                      </tr>  
                 ';
         }
@@ -44,5 +59,11 @@ if(isset($_POST["from_date"], $_POST["to_date"]))
     }
     $output .= '</table>';
     echo $output;
+  
+
+  
+/* Free statement and connection resources. */  
+sqlsrv_free_stmt( $stmt);  
+sqlsrv_close( $conn);
 }
 ?>
