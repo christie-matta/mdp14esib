@@ -64,7 +64,7 @@ $(function() {
 <script>
 window.onload = function () {
  
-/*var chart = new CanvasJS.Chart("chartContainer", {
+var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	exportEnabled: true,
 	theme: "light1", // "light1", "light2", "dark1", "dark2"
@@ -78,9 +78,9 @@ window.onload = function () {
    }); 
 chart.render();
  
-} */
+} 
 	
-<br><br>
+/*
 	
 	var chart = new CanvasJS.Chart("chartContainer1", {
 	animationEnabled: true,
@@ -118,9 +118,8 @@ chart.render();
 
 
 chart.render();
-
-
 }
+*/
 	    	       
 	
 </script>
