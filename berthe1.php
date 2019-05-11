@@ -82,7 +82,7 @@ sqlsrv_free_stmt( $stmt);
             if(from_date != '' && to_date != '')
             {
                 $.ajax({
-                    url:"filter.php",
+                    url:"berthe2.php",
                     method:"POST",
                     data:{from_date:from_date, to_date:to_date},
                     success:function(data)
