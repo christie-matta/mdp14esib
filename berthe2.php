@@ -6,7 +6,7 @@ $serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");
 $connect = sqlsrv_connect( $serverName, $connectionInfo );
   $output = '';
-  $query = "SELECT * FROM Graph WHERE order_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'  
+  $query = "SELECT * FROM Graph WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'  
       ";
   
 $result = sqlsrv_query( $connect,$query );
