@@ -26,39 +26,11 @@ if( $stmt === false)
      echo "Error in query preparation/execution.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }  
-	 $output .= ' 
-	  <table class="table table-bordered">  
-                <tr> 
-                     <th width="5%">ID</th>  
-                     <th width="30%">Value</th>   
-                     <th width="12%">Date</th>  
-                </tr>  
-      ';
-	 if(sqlsrv_num_rows($stmt) > 0)
-    {
-        while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
-        {
-		echo $row['id'].", ".$row['val']."\n";  
-            $output .= '  
-                     <tr>  
-                          <td>'. $row["id"] .'</td>  
-                          <td>'. $row["val"] .'</td>  
-                   
-                          <td>'. $row["datee"] .'</td>  
-                     </tr>  
-                ';
-        }
-    }
-    else
-    {
-        $output .= '  
-                <tr>  
-                     <td colspan="5">No Order Found</td>  
-                </tr>  
-           ';
-    }
-    $output .= '</table>';
-    echo $output;
+	
+	  while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
+	  {
+	  echo  $row["id"]; }
+	
   
 
   
