@@ -51,7 +51,7 @@ catch (PDOException $e) {
             </tr>
             <?php
             
-            while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
+            while( $row = sqlsrv_fetch_array( $handle->execute(), SQLSRV_FETCH_ASSOC) ) {
 		    echo "fetet la hon ";
                 ?>
                 <tr>
