@@ -28,124 +28,29 @@ $query = sqlsrv_query( $conn, "SELECT * FROM Graph Where datee between '$from_da
 <html>
 <head>
     <title>Kfaraabida  </title>
-<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
-	
-	
-	
-<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>-->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
 </head>
 <body>
 <br /><br />
-<div class="container" style="width:900px;">
-    <h2 align="center">Information About Temperature & pH !</h2>
-    <h3 align="center">Graph Data</h3><br />
-    <div class="col-md-3">
-        <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />
-    </div>
-    <div class="col-md-3">
-        <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />
-    </div>
-    <div class="col-md-5">
-        <input type="button" name="filter" id="filter" value="Filter"  class="btn btn-info" />
-    </div>
-    <div style="clear:both"></div>
-    <br />
-   <div id="graph_table">  
-        <table class="table table-bordered">
-            <tr>
-                <th width="5%">ID</th>
-                <th width="30%">Value</th>
-                <th width="12%"> Date</th>
-            </tr>
-            <?php
-            
-            while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
-		 //   echo "fetet la hon ";
-                ?>
-                <tr>
-                    <td><?php echo $row["id"]; ?></td>
-                    <td><?php echo $row["val"]; ?></td>
-                    <td><?php echo $row["datee"]; ?></td>
-                </tr>
-                <?php
-            }
-            ?>
-          
-        </table>
-    </div>
-</div>
+	<form method="post">
+		<input type="date " name="from_date ">
+		<input type="date " name="to_date ">
+		<p>	<input type="submit" name="filter  value="filter ">
+		</p>
+			<?php
+			if($count=="0")
+			{
+			echo '<h2> voila le resultat </h2>';}
+			else 
+			{ while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
+			{
+				$result= $row['id'];
+				$output='<h2>'.$result.'</h2>;
+				echo $output;
+			}
+			}
+			?>
+			</form>
 	</body>
 </html>
 	
-	<script>
-		 
-    $(document).ready(function(){
-        $.datepicker.setDefaults({
-            dateFormat: 'yy-mm-dd'
-        });
-        $(function(){
-            $("#from_date").datepicker();
-            $("#to_date").datepicker();
-        });
-        $('#filter').click(function(){
-            var from_date = $('#from_date').val();
-            var to_date = $('#to_date').val();
-            if(from_date != '' && to_date != '')
-            {
-                $.ajax({
-			
-                    url:"https://github.com/christie-matta/mdp14esib/edit/master/berthe2.php",
-                    method:"POST",
-			/*headers: {
-    'Access-Control-Allow-Credentials' : true,
-    'Access-Control-Allow-Origin':'*',
-    'Access-Control-Allow-Methods':'GET',
-    'Access-Control-Allow-Headers':'application/json',
-  },*/
-			dataType: 'jsonp',
-			//headers: {
-      // 'Content-Type': 'application/x-www-form-urlencoded'
- //   },
-			 //  xhrFields: {
- 			   //  withCredentials: true
-  				//	 },
-                    data:{from_date:from_date, to_date:to_date},
-                    success:function(data)
-                    {
-			  console.log("hello guys "); 
-                       // $('#graph_table').html(data);
-                    },
-        error: function (data) {
-            console.log("EEROROROROROROR");
-           // callback(null);
-        }
-                });
-		    alert("you ve just entered");
-            }
-            else
-            {
-                alert("Please Select Date");
-            }
-        });
-    });
-</script>
 	
-
-
-
-
-
-
-
