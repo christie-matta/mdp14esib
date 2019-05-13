@@ -18,7 +18,7 @@ if( $conn === false )
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
  $selectSql="Select * from Graph where ? <= ? ";
-	  $params=array($_POST['from_date']),$_POST['to_date']));
+	  $params=array($_POST['from_date'],$_POST['to_date']);
 	  
 $query = sqlsrv_query( $conn, $selectSql,$params );
  $count=sqlsrv_num_rows($query) ;
