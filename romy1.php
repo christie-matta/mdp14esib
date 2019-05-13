@@ -20,9 +20,9 @@ if( $conn === false )
 // $selectSql="Select * from Graph where ? <= ? ";
 	  //$params=array($_POST['from_date'],$_POST['to_date']);
 	$a="SELECT * from Graph where ";
-	  $b= $from_date;
+	  $b= $_POST['from_date'];
 	  $c="<=";
-	  $d= $to_date;
+	  $d= $_POST['to_date'];
 	  $e=$a.$b;
 	  $f=$c.$d;
 	  $g=$e.$f;
