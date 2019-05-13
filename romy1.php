@@ -16,7 +16,7 @@ if( $conn === false )
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
   
-$query = sqlsrv_query( $conn, "SELECT id FROM Graph Where datee BETWEEN '$from_date' AND '$to_date' "); 
+$query = sqlsrv_query( $conn, "SELECT * FROM Graph Where datee BETWEEN '$from_date' AND '$to_date' "); 
  $count=sqlsrv_num_rows($query) ;
 
   }
@@ -36,7 +36,7 @@ To: <input type="date" name="to_date">
 </form>
 			<?php
 			if($count>0)
-			{	//echo "telit chi ";
+			{	echo "telit chi ";
 				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
 			{
 					
@@ -48,7 +48,7 @@ To: <input type="date" name="to_date">
 			
 			else 
 			{
-			//echo "hi ";
+			echo "hi ";
 			}
 			?>
 			</form>
