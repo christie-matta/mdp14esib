@@ -9,11 +9,9 @@ if( $conn === false )
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }
-	else {
-		 echo "connection successful here .\n"; 
-	}
   if(isset($_POST['filter']))
   {
+	  echo "tene chi ";
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
   
@@ -41,8 +39,10 @@ To: <input type="date" name="to_date">
 			echo '<h2> hello guys </h2>';}
 			else 
 			{
+				echo "telit chi ";
 				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
 			{
+					
 				$result= $row['id'];
 				$output='<h2>'.$result.'</h2>';
 				echo $output;
