@@ -1,5 +1,7 @@
 
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 $serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");  
@@ -106,12 +108,12 @@ if( $stmt === false)
 			
                     url:"https://github.com/christie-matta/mdp14esib/edit/master/berthe2.php",
                     method:"POST",
-			headers: {
+			/*headers: {
     'Access-Control-Allow-Credentials' : true,
     'Access-Control-Allow-Origin':'*',
     'Access-Control-Allow-Methods':'GET',
     'Access-Control-Allow-Headers':'application/json',
-  },
+  },*/
 			dataType: 'jsonp',
 			//headers: {
       // 'Content-Type': 'application/x-www-form-urlencoded'
