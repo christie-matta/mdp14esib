@@ -35,7 +35,7 @@ $query = sqlsrv_query( $conn, "SELECT * FROM Graph Where  '$from_date' <= '$to_d
   From: <input type="date"  name="from_date">
 To: <input type="date" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
-</form>
+
 			<?php
 			if($count>0)
 			{	echo "telit chi ";
