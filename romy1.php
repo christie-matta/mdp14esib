@@ -30,8 +30,8 @@ $query = sqlsrv_query( $conn, "SELECT id FROM Graph Where datee BETWEEN '$from_d
 </head>
 <body>
 	<form method="post">
-  From: <input type="text"  name="from_date">
-To: <input type="text" name="to_date">
+  From: <input type="date"  name="from_date">
+To: <input type="date" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
 </form>
 			<?php
