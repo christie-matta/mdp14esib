@@ -105,7 +105,11 @@ if( $stmt === false)
                     {
 			  console.log("hello guys "); 
                        // $('#graph_table').html(data);
-                    }
+                    },
+        error: function (data) {
+            console.log("EEROROROROROROR");
+           // callback(null);
+        }
                 });
 		    alert("you ve just entered");
             }
