@@ -86,9 +86,6 @@ if( $stmt === false)
 </div>
 	</body>
 </html>
-
-   
-	
 	
 	<script>
 		 
@@ -109,7 +106,12 @@ if( $stmt === false)
 			
                     url:"https://github.com/christie-matta/mdp14esib/edit/master/berthe2.php",
                     method:"POST",
-			header:'Access-Control-Allow-Origin: *',
+			headers: {
+    'Access-Control-Allow-Credentials' : true,
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers':'application/json',
+  },
 			dataType: 'jsonp',
 			//headers: {
       // 'Content-Type': 'application/x-www-form-urlencoded'
