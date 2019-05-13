@@ -47,7 +47,7 @@ To: <input type="text" name="to_date">
 			
 			else 
 			{
-			echo "hi ";
+			//echo "hi ";
 			}
 			?>
 			</form>
