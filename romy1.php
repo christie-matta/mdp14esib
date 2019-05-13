@@ -34,12 +34,8 @@ To: <input type="text" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
 </form>
 			<?php
-			if($count=="0")
-			{
-			echo '<h2> hello guys </h2>';}
-			else 
-			{
-				echo "telit chi ";
+			if($count!="0")
+			{	echo "telit chi ";
 				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
 			{
 					
@@ -47,6 +43,11 @@ To: <input type="text" name="to_date">
 				$output='<h2>'.$result.'</h2>';
 				echo $output;
 			}
+			}
+			
+			else 
+			{
+			echo "hi ";
 			}
 			?>
 			</form>
