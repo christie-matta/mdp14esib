@@ -19,7 +19,7 @@ if( $conn === false )
   
 $query = sqlsrv_query( $conn, "SELECT id FROM Graph Where datee BETWEEN '$from_date' AND '$to_date' "); 
  $count=sqlsrv_num_rows($query) ;
-echo $count ;
+
   }
 
 ?>
@@ -38,7 +38,7 @@ To: <input type="date" name="to_date">
 			<?php
 			if($count==0)
 			{
-			echo '<h2> voila non resultat </h2>';}
+			echo '<h2> hello guys </h2>';}
 			else 
 			{
 				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
