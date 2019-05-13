@@ -125,7 +125,7 @@ if( $stmt === false)
                     },
         error: function (data) {
             console.log("EEROROROROROROR");
-           // callback(null);
+            callback(null);
         }
                 });
 		    alert("you ve just entered");
