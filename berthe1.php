@@ -102,6 +102,7 @@ if( $stmt === false)
 			
                     url:"https://github.com/christie-matta/mdp14esib/edit/master/berthe2.php",
                     method:"POST",
+			dataType: 'jsonp',
 			//headers: {
      //   'Content-Type': 'application/x-www-form-urlencoded'
   //  },
