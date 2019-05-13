@@ -34,7 +34,7 @@ $query = sqlsrv_query( $conn, "SELECT * FROM Graph Where datee between '$from_da
 	<form method="post">
 		<input type="date " name="from_date ">
 		<input type="date " name="to_date ">
-		<p>	<input type="submit" name="filter  value="filter ">
+		<p>	<input type="submit" name="filter"  value="Filter ">
 		</p>
 			<?php
 			if($count=="0")
