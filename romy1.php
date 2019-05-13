@@ -30,7 +30,7 @@ echo $count ;
     <title>Kfaraabida  </title>
 </head>
 <body>
-	<form action=action="/action_page.php">
+	<form method="post">
   From: <input type="date" name="from_date">
 To: <input type="date" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
