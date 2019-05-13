@@ -20,6 +20,21 @@ if( $conn === false )
   
 $query = sqlsrv_query( $conn, "SELECT * FROM Graph Where  '$from_date' <= '$to_date' "); 
  $count=sqlsrv_num_rows($query) ;
+	  if($count>0)
+			{	echo "telit chi ";
+				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
+			{
+					
+				$result= $row['id'];
+				$output='<h2>'.$result.'</h2>';
+				echo $output;
+			}
+			}
+			
+			else 
+			{
+			echo "hi ";
+			}
 
   }
 
@@ -36,23 +51,7 @@ $query = sqlsrv_query( $conn, "SELECT * FROM Graph Where  '$from_date' <= '$to_d
 To: <input type="date" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
 
-			<?php
-			if($count>0)
-			{	echo "telit chi ";
-				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
-			{
-					
-				$result= $row['id'];
-				$output='<h2>'.$result.'</h2>';
-				echo $output;
-			}
-			}
 			
-			else 
-			{
-			echo "hi ";
-			}
-			?>
 			</form>
 	</body>
 </html>
