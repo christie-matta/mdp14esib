@@ -18,7 +18,8 @@ if( $conn === false )
   // $output = '';
  
 /* Set up and execute the query.       WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."  ";  */  
-$sql = "SELECT * FROM Graph ;
+$sql = "SELECT * FROM Graph
+WHERE datee BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'  ";
       
 $stmt = sqlsrv_query( $conn, $sql);  
 if( $stmt === false)  
@@ -27,14 +28,14 @@ if( $stmt === false)
      die( print_r( sqlsrv_errors(), true));  
 }  
 	
-	  $output .= ' 
+	  $output .= " 
 	  <table class="table table-bordered">  
                 <tr> 
                      <th width="5%">ID</th>  
                      <th width="30%">Value</th>   
                      <th width="12%">Date</th>  
                 </tr>  
-      ';
+      ";
 	 if(sqlsrv_num_rows($stmt) > 0)
     {
         while($row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC))
@@ -52,13 +53,14 @@ if( $stmt === false)
     }
     else
     {
-        $output .= '  
+        $output .= ' 
                 <tr>  
                      <td colspan="5">No Order Found</td>  
                 </tr>  
            ';
     }
     $output .= '</table>';
+   echo $output;
    
   
 
@@ -67,7 +69,7 @@ if( $stmt === false)
 sqlsrv_free_stmt( $stmt);  
 sqlsrv_close( $conn);
 
- echo $output;
+ 
 
 }
 ?>
