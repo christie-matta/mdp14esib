@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *'); 
 if(isset($_POST["from_date"], $_POST["to_date"])) 
 {
   /* Connect to the local server using Windows Authentication and  
