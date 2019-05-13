@@ -30,12 +30,11 @@ echo $count ;
     <title>Kfaraabida  </title>
 </head>
 <body>
-<br /><br />
-	<form method="post">
-		<input type="date" name="from_date ">
-		<input type="date" name="to_date ">
-		<p>	<input type="submit" name="filter"  value="Filter ">
-		</p>
+	<form action=action="/action_page.php">
+  From: <input type="date" name="from_date">
+To: <input type="date" name="to_date">
+  <input type="submit" name="filter"  value="Filter ">
+</form>
 			<?php
 			if($count==0)
 			{
