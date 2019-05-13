@@ -24,8 +24,8 @@ if( $conn === false )
 	  $c=" <= ";
 	  $d= $_POST['to_date'];
 	  $e=$a.$b;
-	  $f=$c.$d;
-	  $g=$e.$f;
+	  $f=$e.$c;
+	  $g=$f.$d;
 	  
 $query = sqlsrv_query( $conn, $g );
  $count=sqlsrv_num_rows($query) ;
