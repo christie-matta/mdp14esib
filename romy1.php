@@ -35,7 +35,7 @@ To: <input type="text" name="to_date">
 </form>
 			<?php
 			if($count>0)
-			{	echo "telit chi ";
+			{	//echo "telit chi ";
 				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
 			{
 					
