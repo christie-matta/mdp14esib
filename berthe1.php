@@ -1,6 +1,6 @@
 
 <?php
-header('Access-Control-Allow-Origin: *'); 
+
 $serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionInfo = array( "Database"=>"DB-MDP", "UID"=>"adminmdp", "PWD"=>"p@ssw0rd");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
@@ -84,6 +84,7 @@ if( $stmt === false)
 	
 	
 	<script>
+		header('Access-Control-Allow-Origin: *'); 
     $(document).ready(function(){
         $.datepicker.setDefaults({
             dateFormat: 'yy-mm-dd'
