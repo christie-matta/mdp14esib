@@ -21,7 +21,10 @@ if( $conn === false )
 	  $b=" <="
 	  $c= $_POST['from_date']
 	  $d=$_POST['to_date']
-$query = sqlsrv_query( $conn, $a.$c.$b.$d );
+	  $e=$a.$c
+	  $e=$e.$b
+	  $e=$e.$d
+$query = sqlsrv_query( $conn, $e );
  $count=sqlsrv_num_rows($query) ;
 if($count >0) echo "wowo" ;
 	  else echo "fail";
