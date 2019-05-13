@@ -102,12 +102,12 @@ if( $stmt === false)
 			
                     url:"https://github.com/christie-matta/mdp14esib/edit/master/berthe2.php",
                     method:"POST",
-			headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    },
-			  //  xhrFields: {
- 			    //   withCredentials: true
-  					//  },
+			//headers: {
+     //   'Content-Type': 'application/x-www-form-urlencoded'
+  //  },
+			   xhrFields: {
+ 			      withCredentials: true
+  					  },
                     data:{from_date:from_date, to_date:to_date},
                     success:function(data)
                     {
