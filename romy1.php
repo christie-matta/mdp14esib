@@ -17,7 +17,7 @@ if( $conn === false )
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
   
-$query = sqlsrv_query( $conn, "SELECT id FROM Graph Where datee BETWEEN '$from_date' AND '$to_date'"); 
+$query = sqlsrv_query( $conn, "SELECT id FROM Graph Where datee BETWEEN '$from_date' AND '$to_date' "); 
  $count=sqlsrv_num_rows($query) ;
 echo $count ;
   }
@@ -32,8 +32,8 @@ echo $count ;
 <body>
 <br /><br />
 	<form method="post">
-		<input type="date " name="from_date ">
-		<input type="date " name="to_date ">
+		<input type="date" name="from_date ">
+		<input type="date" name="to_date ">
 		<p>	<input type="submit" name="filter"  value="Filter ">
 		</p>
 			<?php
