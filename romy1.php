@@ -17,7 +17,7 @@ if( $conn === false )
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
   
-$query = sqlsrv_query( $conn, "SELECT * FROM Graph Where datee BETWEEN '$from_date' AND '$to_date' "); 
+$query = sqlsrv_query( $conn, "SELECT * FROM Graph Where  '$from_date' <= '$to_date' "); 
  $count=sqlsrv_num_rows($query) ;
 
   }
