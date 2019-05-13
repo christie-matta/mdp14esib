@@ -11,8 +11,8 @@ if( $conn === false )
 }
   if(isset($_POST['filter']))
   {
-	// echo ($_POST['from_date']);
-	 //  echo ($_POST['to_date']);
+	 echo ($_POST['from_date']);
+	   echo ($_POST['to_date']);
 	  if($_POST['from_date']<=$_POST['to_date']){
 	echo(  gettype($_POST['to_date']) );}
   $from_date=$_POST['from_date'];
