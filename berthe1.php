@@ -111,9 +111,9 @@ if( $stmt === false)
                     method:"POST",
 			header:'Access-Control-Allow-Origin: *',
 			dataType: 'jsonp',
-			headers: {
-       'Content-Type': 'application/x-www-form-urlencoded'
-    },
+			//headers: {
+      // 'Content-Type': 'application/x-www-form-urlencoded'
+ //   },
 			   xhrFields: {
  			     withCredentials: true
   					 },
