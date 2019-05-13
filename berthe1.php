@@ -84,7 +84,7 @@ if( $stmt === false)
 	
 	
 	<script>
-		header('Access-Control-Allow-Origin: *'); 
+		 
     $(document).ready(function(){
         $.datepicker.setDefaults({
             dateFormat: 'yy-mm-dd'
