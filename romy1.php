@@ -17,10 +17,17 @@ if( $conn === false )
 	echo(  gettype($_POST['to_date']) );}
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
- $selectSql="Select * from Graph where ? <= ? ";
-	  $params=array($_POST['from_date'],$_POST['to_date']);
+// $selectSql="Select * from Graph where ? <= ? ";
+	  //$params=array($_POST['from_date'],$_POST['to_date']);
+	$a="SELECT * from Graph where ";
+	  $b= $from_date;
+	  $c="<=";
+	  $d= $to_date;
+	  $e=$a.$b;
+	  $f=$c.$d;
+	  $g=$e.$f;
 	  
-$query = sqlsrv_query( $conn, $selectSql,$params );
+$query = sqlsrv_query( $conn, $g );
  $count=sqlsrv_num_rows($query) ;
 if($count >0) echo "wowo" ;
 	  else echo "fail";
