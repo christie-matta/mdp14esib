@@ -19,8 +19,9 @@ if( $conn === false )
   $to_date=$_POST['to_date'];
   $a="SELECT * FROM Graph Where "
 	  $b=" <="
-	  
-$query = sqlsrv_query( $conn, $a.$_POST['from_date'].$b.$_POST['to_date'] );
+	  $c= $_POST['from_date']
+	  $d=$_POST['to_date']
+$query = sqlsrv_query( $conn, $a.$c.$b.$d );
  $count=sqlsrv_num_rows($query) ;
 if($count >0) echo "wowo" ;
 	  else echo "fail";
