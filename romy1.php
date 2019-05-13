@@ -36,7 +36,7 @@ To: <input type="date" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
 </form>
 			<?php
-			if($count==0)
+			if($count=="0")
 			{
 			echo '<h2> hello guys </h2>';}
 			else 
