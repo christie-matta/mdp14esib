@@ -116,9 +116,9 @@ if( $stmt === false)
 			//headers: {
       // 'Content-Type': 'application/x-www-form-urlencoded'
  //   },
-			   xhrFields: {
- 			     withCredentials: true
-  					 },
+			 //  xhrFields: {
+ 			   //  withCredentials: true
+  				//	 },
                     data:{from_date:from_date, to_date:to_date},
                     success:function(data)
                     {
@@ -127,7 +127,7 @@ if( $stmt === false)
                     },
         error: function (data) {
             console.log("EEROROROROROROR");
-            callback(null);
+           // callback(null);
         }
                 });
 		    alert("you ve just entered");
