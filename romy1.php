@@ -13,7 +13,7 @@ if( $conn === false )
   {
 	 echo ($_POST['from_date']);
 	   echo ($_POST['to_date']);
-	echo(  get_type($_POST['to_date']) );
+	echo(  gettype($_POST['to_date']) );
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
   
