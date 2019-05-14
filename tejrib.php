@@ -12,7 +12,6 @@ try {
       {  
       if ($_GET['action'] == 'add')  
           { 
-	     
           $debut="SELECT *  FROM Graph WHERE dates>='";
           $datefrom=&$_POST['from'];
           $dateto=&$_POST['toto'];
@@ -30,12 +29,13 @@ try {
     foreach($result as $row){
         array_push($dataPoints, array(
 		"x"=> $row->id, 
-		"y"=> $row->val));		      
+		"y"=> $row->dates));		      
     }
 	$link = null;
 }
 	       }
       }
+
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
