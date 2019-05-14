@@ -60,7 +60,7 @@ window.onload = function () {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
-		text: "Temperature"
+		text: "temperature"
 	},
 	axisY:{
 		includeZero: false
