@@ -84,8 +84,11 @@
                      <br><br><br> -->
        
        
-     <div id="now" >
-            <h1><bold> NOW </bold></h1>
+      <div id="mnt" align="center">
+            <h1 style="color:white;" font-size="50px" ><bold> Latest updates</bold></h1>
+
+</div>
+       
             
 
   
