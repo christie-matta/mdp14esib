@@ -5,12 +5,14 @@ $dataPoints = array();
 try {
     $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
     $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-    $handle = $conn->prepare('select id, val from Graph '); 
+    $handle = $conn->prepare('select val from Graph '); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
     foreach($result as $row){
-        array_push($dataPoints, array("x"=> $row->id, "y"=> $row->val));
+        array_push($dataPoints, array("x"=> $row->id, 
+				      //"y"=> $row->val));
+				      );
     }
 	$link = null;
 }
