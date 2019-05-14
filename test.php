@@ -31,7 +31,7 @@ if (isset($_GET['action']))
         $debut="SELECT *  FROM Graph WHERE dates>='";
         $datefrom=&$_POST['from'];
         $dateto=&$_POST['toto'];
-        $and="' and dates<=' ";
+        $and="' and dates<='";
         $fin="';";
         $a=$debut.$datefrom;
             $b=$a.$and;
