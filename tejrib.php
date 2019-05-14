@@ -30,8 +30,8 @@ try {
 		
     foreach($result as $row){
         array_push($dataPoints, array(
-		"x"=> $row->val, 
-		"y"=> $row->id));		      
+		"x"=> $row->id, 
+		"y"=> $row->val));		      
     }
 	$link = null;
 }
