@@ -12,6 +12,7 @@ try {
       {  
       if ($_GET['action'] == 'add')  
           { 
+	      echo "hellooooo";
           /*Insert data.*/  
           $debut="SELECT *  FROM Graph WHERE dates>='";
           $datefrom=&$_POST['from'];
