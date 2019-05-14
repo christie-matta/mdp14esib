@@ -1,41 +1,6 @@
-<?php
- 
-$dataPoints = array();
-//Best practice is to create a separate file for handling connection to database
-try {
-    $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
-    $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-      if (isset($_GET['action']))  
-      {  
-      if ($_GET['action'] == 'add')  
-          { echo "hello"; 
-          /*Insert data.*/  
-          $debut="SELECT *  FROM Graph WHERE dates>='";
-          $datefrom=&$_POST['from'];
-          $dateto=&$_POST['toto'];
-          $and="' and dates<='";
-          $fin="';";
-          $a=$debut.$datefrom;
-              $b=$a.$and;
-              $c=$b.$dateto;
-              $sql=$c.$fin;
-    $handle = $conn->prepare($sql); 
-    $handle->execute(); 
-    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
-		
-    foreach($result as $row){
-        array_push($dataPoints, array(
-		"x"=> $row->id, 
-		"y"=> $row->val));		      
-    }
-	$link = null;
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
-	
-?>
+
+
+
 <!DOCTYPE HTML>
 <html>
  <head>  
@@ -114,3 +79,42 @@ chart.render();
 	
 </body>
 </html>
+<?php
+ 
+$dataPoints = array();
+//Best practice is to create a separate file for handling connection to database
+try {
+    $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
+    $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+      if (isset($_GET['action']))  
+      {  
+      if ($_GET['action'] == 'add')  
+          { 
+          /*Insert data.*/  
+          $debut="SELECT *  FROM Graph WHERE dates>='";
+          $datefrom=&$_POST['from'];
+          $dateto=&$_POST['toto'];
+          $and="' and dates<='";
+          $fin="';";
+          $a=$debut.$datefrom;
+              $b=$a.$and;
+              $c=$b.$dateto;
+              $sql=$c.$fin;
+    $handle = $conn->prepare($sql); 
+    $handle->execute(); 
+    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+		
+    foreach($result as $row){
+        array_push($dataPoints, array(
+		"x"=> $row->id, 
+		"y"=> $row->val));		      
+    }
+	$link = null;
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+	
+?>
+
