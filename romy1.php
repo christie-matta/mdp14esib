@@ -29,6 +29,14 @@ if( $conn === false )
 	  
 $query = sqlsrv_query( $conn, "SELECT * from Graph" );
  $count=sqlsrv_num_rows($query) ;
+	  while($row = sqlsrv_fetch_array($stmt)) 
+{ 
+ 
+print("<tr><td>".$row['id']."</td>"); 
+print("<td>".$row['val']."</td>"); 
+print("<td>".$row['datee']."</td>"); 
+
+} 
 if($count >0) echo "wowo" ;
 	  else echo "fail";
   }
