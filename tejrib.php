@@ -29,7 +29,7 @@ try {
     foreach($result as $row){
         array_push($dataPoints, array(
 		"x"=> $row->id, 
-		"y"=> $row->dates));		      
+		"y"=> $row->val));		      
     }
 	$link = null;
 }
@@ -42,9 +42,6 @@ catch (PDOException $e) {
 }
 	
 ?>
-
-
-
 <!DOCTYPE HTML>
 <html>
  <head>  
