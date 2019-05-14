@@ -4,6 +4,12 @@
 </head>  
 <body>  
     <h1> welcome </h1>
+    <form method="post" action="?action=add" enctype="multipart/form-data" >  
+From : <input type="date" name="from" id="from"/></br>  
+To :  <input type="date" name="to" id="to"/></br>  
+<input type="submit" name="submit" value="Submit" />  
+</form> 
+
 <?php  
 /*Connect using SQL Server authentication.*/  
 $serverName = "tcp:server-mdp.database.windows.net,1433";
@@ -20,7 +26,7 @@ if ($conn === false)
     }  
   
  
-         
+         echo(&$_POST['from']);
 
 $sql =  "SELECT *  FROM Graph WHERE id=( SELECT max( id ) FROM Graph )"; 
  
