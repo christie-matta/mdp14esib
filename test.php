@@ -1,9 +1,56 @@
-<?php
-include('phpgraphlib.php');
-$graph = new PHPGraphLib(400,300);
-$data = array("Alex"=>99, "Mary"=>98, "Joan"=>70, "Ed"=>90);
-$graph->addData($data);
-$graph->setTitle("Test Scores");
-$graph->setTextColor("blue");
-$graph->createGraph();
-?>
+<html>  
+<head>  
+<Title>Azure SQL Database - PHP Website</Title>  
+</head>  
+<body>  
+<form method="post" action="?action=add" enctype="multipart/form-data" >  
+Emp Id <input type="text" name="t_emp_id" id="t_emp_id"/></br>  
+Name <input type="text" name="t_name" id="t_name"/></br>  
+Education <input type="text" name="t_education" id="t_education"/></br>  
+E-mail address <input type="text" name="t_email" id="t_email"/></br>  
+<input type="submit" name="submit" value="Submit" />  
+</form>  
+<?php  
+/*Connect using SQL Server authentication.*/  
+$serverName = "tcp:server-mdp.database.windows.net,1433";
+$connectionOptions = array(  
+    "Database" => "DB-MDP",  
+    "UID" => "adminmdp",  
+    "PWD" => "p@ssw0rd"  
+);  
+$conn = sqlsrv_connect($serverName, $connectionOptions);  
+  
+if ($conn === false)  
+    {  
+    die(print_r(sqlsrv_errors() , true));  
+    }  
+  
+ 
+
+$sql = "SELECT *  FROM Graph WHERE id=( SELECT max(id) FROM Graph )"; 
+$stmt = sqlsrv_query($conn, $sql); 
+if($stmt === false) 
+{ 
+die(print_r(sqlsrv_errors(), true)); 
+} 
+ 
+if(sqlsrv_has_rows($stmt)) 
+{ 
+print("<table border='1px'>"); 
+print("<tr><td> Id</td>"); 
+print("<td>Val</td>"); 
+print("<td>date</td></tr>"); 
+ 
+while($row = sqlsrv_fetch_array($stmt)) 
+{ 
+ 
+print("<tr><td>".$row['id']."</td>"); 
+print("<td>".$row['val']."</td>"); 
+print("<td>".$row['datee']."</td></tr>"); 
+} 
+ 
+print("</table>"); 
+}*/  
+?>  
+</body>  
+</html>  
