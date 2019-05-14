@@ -55,22 +55,7 @@ To : address <input type="date" name="toto" id="toto"/></br>
     
 <script>
 window.onload = function () {
- 
-/*var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	exportEnabled: true,
-	theme: "light1", // "light1", "light2", "dark1", "dark2"
-	title:{
-		text: "Graph"
-	},
-	data: [{
-		type: "column", //change type to bar, line, area, pie, etc  
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	 }]  
-   }); 
-chart.render();
- 
-} */
+
 	var chart = new CanvasJS.Chart("chartContainer1", {
 	animationEnabled: true,
 	theme: "light2",
