@@ -32,7 +32,7 @@ if (isset($_GET['action']))
         $datefrom=&$_POST['from'];
         $dateto=&$_POST['toto'];
         $and="' and dates<='";
-        $fin="';";
+        $fin="' order by dates;";
         $a=$debut.$datefrom;
             $b=$a.$and;
             $c=$b.$dateto;
