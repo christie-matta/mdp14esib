@@ -29,7 +29,7 @@ try {
 		
     foreach($result as $row){
         array_push($dataPoints, array(
-		"x"=> $row->id, 
+		"x"=> $row->dates, 
 		"y"=> $row->val));		      
     }
 	$link = null;
@@ -58,11 +58,7 @@ catch (PDOException $e) {
   </form> 
 <script>
 window.onload = function () {
- 
-
-	
-	
-	var chart = new CanvasJS.Chart("chartContainer1", {
+ var chart = new CanvasJS.Chart("chartContainer1", {
 	animationEnabled: true,
 	theme: "light2",
 	title:{
