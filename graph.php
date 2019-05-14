@@ -12,7 +12,7 @@ try {
     foreach($result as $row){
         array_push($dataPoints, array(
 		//"y"=> $row->id, 
-		"x"=> $row->val);
+		"x"=> $row->val));
 				      
     }
 	$link = null;
