@@ -29,7 +29,7 @@ try {
 		
     foreach($result as $row){
         array_push($dataPoints, array(
-		"x"=> $row->dates, 
+		"x"=> $row->id, 
 		"y"=> $row->val));		      
     }
 	$link = null;
