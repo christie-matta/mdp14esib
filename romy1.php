@@ -24,7 +24,7 @@ if( $conn === false )
 	  $e=$a.$b;
 	 
 	  
-$query = sqlsrv_query( $conn, $g );
+$query = sqlsrv_query( $conn, $e );
  $count=sqlsrv_num_rows($query) ;
 if($count >0) echo "wowo" ;
 	  else echo "fail";
