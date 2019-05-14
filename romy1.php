@@ -25,7 +25,23 @@ if($stmt === false)
 { 
 die(print_r(sqlsrv_errors(), true)); 
 } 
+if(sqlsrv_has_rows($stmt)) 
+{ 
+print("<table border='1px'>"); 
+print("<tr><td> Id</td>"); 
+print("<td>val</td>");  
+print("<td>datee</td></tr>"); 
  
+while($row = sqlsrv_fetch_array($stmt)) 
+{ 
+ 
+print("<tr><td>".$row['id']."</td>"); 
+print("<td>".$row['val']."</td>"); 
+print("<td>".$row['datee']."</td></tr>"); 
+} 
+ 
+print("</table>"); 
+}
 // $count=sqlsrv_num_rows($query) ;
 //	  while($row = sqlsrv_fetch_array($stmt)) 
 //{ 
@@ -52,24 +68,8 @@ die(print_r(sqlsrv_errors(), true));
 To: <input type="date" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
 
-			<?php
-		 if($count>0)
-			{	echo "telit chi ";
-				while($row = sqlsrv_fetch_array( $query, SQLSRV_FETCH_ASSOC))
-			{
-					
-				$result= $row['id'];
-				$output='<h2>'.$result.'</h2>';
-				echo $output;
-			}
-			}
 			
-			else 
-			{
-			echo "hi ";
-			}
-?>
-			</form>
+	</form>
 	</body>
 </html>
 	
