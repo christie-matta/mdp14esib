@@ -4,6 +4,7 @@
 $dataPoints = array();
 //Best practice is to create a separate file for handling connection to database
 try {
+	echo "hi ";
     $conn = new \PDO("sqlsrv:server = tcp:server-mdp.database.windows.net,1433; Database = DB-MDP", "adminmdp", "p@ssw0rd");
     $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
       if (isset($_GET['action']))  
