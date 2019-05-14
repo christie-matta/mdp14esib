@@ -28,10 +28,10 @@ if (isset($_GET['action']))
     if ($_GET['action'] == 'add')  
         {  
         /*Insert data.*/  
-        $debut="SELECT *  FROM Graph WHERE datee>=";
+        $debut="SELECT *  FROM Graph WHERE dates>=";
         $datefrom=&$_POST['from'];
         $dateto=&$_POST['toto'];
-        $and=" and datee<= ";
+        $and=" and dates<= ";
         $fin=";";
         $a=$debut.$datefrom;
             $b=$a.$and;
@@ -59,7 +59,7 @@ while($row = sqlsrv_fetch_array($stmt))
  
 print("<tr><td>".$row['id']."</td>"); 
 print("<td>".$row['val']."</td>"); 
-print("<td>".$row['datee']."</td></tr>"); 
+print("<td>".$row['dates']."</td></tr>"); 
 } 
  
 print("</table>"); 
