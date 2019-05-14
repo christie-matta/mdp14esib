@@ -28,7 +28,17 @@ if (isset($_GET['action']))
     if ($_GET['action'] == 'add')  
         {  
         /*Insert data.*/  
-        $sql =  "SELECT *  FROM Graph WHERE id=( SELECT max( id ) FROM Graph )"; 
+        $debut="SELECT *  FROM Graph WHERE datee>=";
+        $datefrom=&$_POST['from'];
+        $dateto=&$_POST['toto'];
+        $and=" and datee<= ";
+        $fin=";";
+        $a=$debut.$datefrom;
+            $b=$a.$and;
+            $c=$b.$dateto;
+            $sql=$c.$fin;
+        
+      //  $sql =  "SELECT *  FROM Graph WHERE id=( SELECT max( id ) FROM Graph )"; 
  
 
 $stmt = sqlsrv_query($conn, $sql); 
