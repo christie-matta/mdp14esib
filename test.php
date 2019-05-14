@@ -4,6 +4,8 @@
 </head>  
 <body>  
     <h1> welcome </h1>
+    
+    
     <form method="post" action="?action=add" enctype="multipart/form-data" >  
 From : <input type="date" name="from" id="from"/></br>  
 To :  <input type="date" name="to" id="to"/></br>  
@@ -11,6 +13,10 @@ To :  <input type="date" name="to" id="to"/></br>
 </form> 
 
 <?php  
+if (isset($_GET['action']))  
+    {  
+    if ($_GET['action'] == 'add')  
+        {  
 /*Connect using SQL Server authentication.*/  
 $serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionOptions = array(  
@@ -37,7 +43,7 @@ if($stmt === false)
 die(print_r(sqlsrv_errors(), true)); 
 } 
  
-if(sqlsrv_has_rows($stmt)) 
+/*if(sqlsrv_has_rows($stmt)) 
 { 
 print("<table border='1px'>"); 
 print("<tr><td> Id</td>"); 
@@ -52,8 +58,8 @@ print("<td>".$row['val']."</td>");
 print("<td>".$row['datee']."</td></tr>"); 
 } 
  
-print("</table>"); 
-}
+print("</table>"); */
+} } } 
 ?>  
 </body>  
 </html>  
