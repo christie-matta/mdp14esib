@@ -37,7 +37,8 @@ if (isset($_GET['action']))
             $b=$a.$and;
             $c=$b.$dateto;
             $sql=$c.$fin;
-        
+        echo($sql);
+        echo(gettype($datefrom));
       //  $sql =  "SELECT *  FROM Graph WHERE id=( SELECT max( id ) FROM Graph )"; 
  
 
