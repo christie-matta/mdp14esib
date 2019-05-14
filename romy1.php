@@ -9,7 +9,7 @@ if( $conn === false )
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }
-  if(isset($_POST['filter']))
+ /* if(isset($_POST['filter']))
   {
 	 echo ($_POST['from_date']);
 	   echo ($_POST['to_date']);
@@ -18,7 +18,7 @@ if( $conn === false )
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
 // $selectSql="Select * from Graph where ? <= ? ";
-	  //$params=array($_POST['from_date'],$_POST['to_date']);
+	  //$params=array($_POST['from_date'],$_POST['to_date']);*/
 	  
 $query = sqlsrv_query( $conn, "SELECT * from Graph" );
 if($stmt === false) 
@@ -63,12 +63,12 @@ print("</table>");
     <title>Kfaraabida  </title>
 </head>
 <body>
-	<form method="post">
+	<!-- <form method="post">
   From: <input type="date"  name="from_date">
 To: <input type="date" name="to_date">
   <input type="submit" name="filter"  value="Filter ">
 
-			
+		-->	
 	</form>
 	</body>
 </html>
