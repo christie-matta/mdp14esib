@@ -81,11 +81,12 @@
                          <span class="sr-only">Next</span>
                        </a>
                      </div> -->
-                     <br><br><br>
        
+             
        
+       <br><br><br>
       <div id="mnt" align="center">
-            <h1 style="color:white;" font-size="50px" ><bold> Latest updates</bold></h1>
+            <h1 style="color:white;" font-size="50px" ><bold> Latest Updates</bold></h1>
 
 </div>
        
