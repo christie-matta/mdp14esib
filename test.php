@@ -20,7 +20,7 @@ if ($conn === false)
     }  
   
  
-$a = "SELECT *  FROM Graph WHERE id=( SELECT max(id) FROM Graph )"
+$a = "SELECT *  FROM Graph WHERE id=( SELECT max(id) FROM Graph )";
 $sql = $a; 
 $stmt = sqlsrv_query($conn, $sql); 
 if($stmt === false) 
