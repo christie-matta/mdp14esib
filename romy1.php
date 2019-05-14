@@ -19,27 +19,25 @@ if( $conn === false )
   $to_date=$_POST['to_date'];
 // $selectSql="Select * from Graph where ? <= ? ";
 	  //$params=array($_POST['from_date'],$_POST['to_date']);
-	$a="SELECT * from Graph where ";
-	  $b= $_POST['from_date'];
-	  $c=" <= ";
-	  $d= $_POST['to_date'];
-	  $e=$a.$b;
-	  $f=$e.$c;
-	  $g=$f.$d;
 	  
 $query = sqlsrv_query( $conn, "SELECT * from Graph" );
- $count=sqlsrv_num_rows($query) ;
-	  while($row = sqlsrv_fetch_array($stmt)) 
+if($stmt === false) 
 { 
+die(print_r(sqlsrv_errors(), true)); 
+} 
  
-print("<tr><td>".$row['id']."</td>"); 
-print("<td>".$row['val']."</td>"); 
-print("<td>".$row['datee']."</td>"); 
+// $count=sqlsrv_num_rows($query) ;
+//	  while($row = sqlsrv_fetch_array($stmt)) 
+//{ 
+ 
+//print("<tr><td>".$row['id']."</td>"); 
+//print("<td>".$row['val']."</td>"); 
+//print("<td>".$row['datee']."</td>"); 
 
 } 
-if($count >0) echo "wowo" ;
-	  else echo "fail";
-  }
+//if($count >0) echo "wowo" ;
+//	  else echo "fail";
+ // }
 
 ?>
 
