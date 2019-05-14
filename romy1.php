@@ -16,6 +16,7 @@ if( $conn === false )
   $from_date=$_POST['from_date'];
   $to_date=$_POST['to_date'];
  $sql="Select * from Graph where '$from_date' <=  '$to_date' ";
+	  echo($sql);
 	  //$params=array($_POST['from_date'],$_POST['to_date']);
 	/*$a="SELECT * from Graph where ";
 	  $b= $_POST['from_date'];
