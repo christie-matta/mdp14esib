@@ -10,9 +10,10 @@ try {
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
     foreach($result as $row){
-        array_push($dataPoints, array("x"=> $row->id, 
-				      //"y"=> $row->val));
-				      );
+        array_push($dataPoints, array(
+		//"y"=> $row->id, 
+		"x"=> $row->val);
+				      
     }
 	$link = null;
 }
