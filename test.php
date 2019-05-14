@@ -22,10 +22,10 @@ if ($conn === false)
  
          
 
-$sql =  "SELECT *  FROM Graph WHERE id=( SELECT max( ? ) FROM Graph )"; 
+$sql =  "SELECT *  FROM Graph WHERE id=( SELECT max( id ) FROM Graph )"; 
  
-$params = array("id" );
-$stmt = sqlsrv_query($conn, $sql, $params); 
+
+$stmt = sqlsrv_query($conn, $sql); 
 if($stmt === false) 
 { 
 die(print_r(sqlsrv_errors(), true)); 
