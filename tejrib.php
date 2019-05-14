@@ -2,6 +2,7 @@
 <?php
  
 $dataPoints = array();
+
 //Best practice is to create a separate file for handling connection to database
 try {
 	echo "hi ";
@@ -21,8 +22,7 @@ try {
               $b=$a.$and;
               $c=$b.$dateto;
               $sql=$c.$fin;
-      }
-      }
+     
     $handle = $conn->prepare($sql); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
@@ -34,6 +34,8 @@ try {
     }
 	$link = null;
 }
+	       }
+      }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
