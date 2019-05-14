@@ -44,7 +44,7 @@ print("<td>".$row['datee']."</td></tr>");
 } 
  
 print("</table>"); 
-}*/  
+}
 ?>  
 </body>  
 </html>  
