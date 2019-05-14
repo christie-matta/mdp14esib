@@ -27,7 +27,7 @@ if( $conn === false )
 	  $f=$e.$c;
 	  $g=$f.$d;
 	  
-$query = sqlsrv_query( $conn, $g );
+$query = sqlsrv_query( $conn, "SELECT * from Graph" );
  $count=sqlsrv_num_rows($query) ;
 if($count >0) echo "wowo" ;
 	  else echo "fail";
