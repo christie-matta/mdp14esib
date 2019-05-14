@@ -21,8 +21,9 @@ try {
               $b=$a.$and;
               $c=$b.$dateto;
               $sql=$c.$fin;
-      }}
-    $handle = $conn->prepare('$sql'); 
+      }
+      }
+    $handle = $conn->prepare($sql); 
     $handle->execute(); 
     $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 		
