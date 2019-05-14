@@ -60,7 +60,7 @@
           
           
                  
-    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+    <!--<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                        <div class="carousel-inner">
                          <div class="carousel-item active" data-interval="500">
                            <img src="beach11.jpg" class="d-block w-100" alt="Beach Kfar Abida">
@@ -81,19 +81,22 @@
                          <span class="sr-only">Next</span>
                        </a>
                      </div>
-                     <br><br><br>
+                     <br><br><br> -->
+       
+       
+     <div id="now" >
+            <h1><bold> NOW </bold></h1>
+            
 
   
 <form id="now" method="post" action="?action=add" enctype="multipart/form-data" >  
-From : <input type="date" name="from" id="from"/></br>  
-To :  <input type="date" name="to" id="to"/></br>  
-<input type="submit" name="submit" value="Submit" id="filter" />
+
 </form> 
 
 <?php  
 
 
-echo 'now';
+
 /*Connect using SQL Server authentication.*/  
 $serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionOptions = array(  
