@@ -12,8 +12,7 @@ try {
       {  
       if ($_GET['action'] == 'add')  
           { 
-	      
-          /*Insert data.*/  
+	     
           $debut="SELECT *  FROM Graph WHERE dates>='";
           $datefrom=&$_POST['from'];
           $dateto=&$_POST['toto'];
@@ -54,7 +53,7 @@ catch (PDOException $e) {
  
   <form method="post" action="?action=add" enctype="multipart/form-data" >  
   From : <input type="date" name="from" id="from"/></br>  
-  To : address <input type="date" name="toto" id="toto"/></br>  
+  To : <input type="date" name="toto" id="toto"/></br>  
   <input type="submit" name="submit" value="Submit" />  
   </form> 
 <script>
