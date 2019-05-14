@@ -28,11 +28,11 @@ if (isset($_GET['action']))
     if ($_GET['action'] == 'add')  
         {  
         /*Insert data.*/  
-        $debut="SELECT *  FROM Graph WHERE dates>=";
+        $debut="SELECT *  FROM Graph WHERE dates>='";
         $datefrom=&$_POST['from'];
         $dateto=&$_POST['toto'];
-        $and=" and dates<= ";
-        $fin=";";
+        $and="' and dates<=' ";
+        $fin="';";
         $a=$debut.$datefrom;
             $b=$a.$and;
             $c=$b.$dateto;
