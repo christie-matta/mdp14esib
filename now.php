@@ -20,7 +20,7 @@
 <body>
 <body style='background-image: linear-gradient(to bottom right,#8AECAF, #06a7cf);'>
        
-       <nav class="navbar text-white navbar-expand-lg  navbar-light"    >
+       <nav class="navbar text-white navbar-expand-lg  navbar-light">
          <a class="navbar-brand text-white" href="#">MDP 14</a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
                <a class="nav-link text-white" href="home.html">Home <span class="sr-only">(current)</span></a>
              </li>
              <li class="nav-item">
-               <a class="nav-link text-white" href="#">Live</a>
+               <a class="nav-link text-white" href="now.html">Latest updates</a>
              </li>
               <li class="nav-item active">
                <a class="nav-link text-white" href="home.html"> Map <span class="sr-only">(current)</span></a>
@@ -43,13 +43,13 @@
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                  <a class="dropdown-item " href="#">Kfaraabida's public Beach</a>
-                 <a class="dropdown-item" href="#">Another action</a>
+                 <a class="dropdown-item" href="#">Sour beach</a>
                  <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="#">Something else here</a>
+                 <a class="dropdown-item" href="#">Other beaches</a>
                </div>
              </li>
              <li class="nav-item active">
-               <a class="nav-link text-white" href="home.html"> Our Mission <span class="sr-only">(current)</span></a>
+               <a class="nav-link text-white" href="mission.html"> Our Mission <span class="sr-only">(current)</span></a>
              </li>
                <li class="nav-item active">
                <a class="nav-link text-white" href="contact.html"> Contact Us <span class="sr-only">(current)</span></a>
