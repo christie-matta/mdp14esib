@@ -80,16 +80,14 @@
                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
                          <span class="sr-only">Next</span>
                        </a>
-                     </div> -->
+                     </div>
+                     <br><br><br> -->
        
-             
        
-       <br><br><br>
-      <div id="mnt" align="center">
-            <h1 style="color:white;" font-size="50px" ><bold> Latest Updates</bold></h1>
+     <div id="now" >
+            <h1 style="color:white;" font-size="10em" ><bold> NOW </bold></h1>
 
 </div>
-       
             
 
   
@@ -129,20 +127,23 @@ die(print_r(sqlsrv_errors(), true));
  
 if(sqlsrv_has_rows($stmt)) 
 { 
-print("<table border='1px'>"); 
-print("<tr><td> Id</td>"); 
-print("<td>Val</td>"); 
-print("<td>date</td></tr>"); 
+//print("<table border='1px'>"); 
+//print("<tr><td> Id</td>"); 
+//print("<td>Val</td>"); 
+//print("<td>date</td></tr>"); 
  
 while($row = sqlsrv_fetch_array($stmt)) //il cherche dans chaque row
 { 
  
-print("<tr><td>".$row['id']."</td>"); 
+/*print("<tr><td>".$row['id']."</td>"); 
 print("<td>".$row['val']."</td>"); 
-print("<td>".$row['datee']."</td></tr>"); 
+print("<td>".$row['datee']."</td></tr>"); */
+print($row['val']); 
+print($row['datee']);
+
 } 
  
-print("</table>"); 
+//print("</table>"); 
 }
 ?>  
     
