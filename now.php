@@ -141,10 +141,11 @@ print("<td>date</td></tr>"); */
  
 while($row = sqlsrv_fetch_array($stmt)) //il cherche dans chaque row
 { 
- 
+ echo $row['val'];
+ echo $row['dates'];     
 /*print("<tr><td>".$row['id']."</td>"); */
-print("<td>".$row['val']."</td>"); 
-print("<td>".$row['dates']."</td></tr>");
+//print("<td>".$row['val']."</td>"); 
+//print("<td>".$row['dates']."</td></tr>");
 /*print($row['val']); 
 print($row['datee']);*/
 
