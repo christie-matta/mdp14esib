@@ -96,17 +96,10 @@
          <br>
          <h3 style="color:#6495ED;" font-size="20px"><bold> TODAY </bold></h3>
          <br>
-         <img src="undersea.jpg" class="img-fluid" alt="Responsive image width="100px" height="100px">
+         
       </div>
-      
-      <br>
-       
-            
-
-  
 <form id="now" method="post" action="?action=add" enctype="multipart/form-data" >  
-
-</form> 
+      </form> 
 
 <?php  
 
@@ -159,6 +152,8 @@ print($row['datee']);*/
  print("</table>"); 
 }
 ?>  
+      <br>
+      <img src="undersea.jpg" class="img-fluid" alt="Responsive image width="100px" height="100px">
     
 </body>  
 </html>
