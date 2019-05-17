@@ -95,6 +95,8 @@
             <h1 style="color:white;" font-size="50px" ><bold> Latest Updates </bold></h1>
          <br>
          <h3 style="color:#6495ED;" font-size="20px"><bold> TODAY </bold></h3>
+         <br>
+         <img src="undersea.jpg" class="img-fluid" alt="Responsive image">
       </div>
       
       <br>
