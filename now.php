@@ -102,9 +102,6 @@
       </form> 
 
 <?php  
-
-
-
 /*Connect using SQL Server authentication.*/  
 $serverName = "tcp:server-mdp.database.windows.net,1433";
 $connectionOptions = array(  
@@ -155,9 +152,10 @@ print($row['datee']);*/
  print("</table>"); 
 }
 ?>  
+
       <br>
       <div id="photo" align="center">
-      <img src="undersea.jpg" class="img-fluid" alt="Responsive image width="100px" height="100px">
+      <img src="undersea.jpg" class="img-fluid" alt="Responsive image" width="100px" height="100px">
       </div>
 </body>  
 </html>
