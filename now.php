@@ -96,7 +96,7 @@
          <br>
          <h3 style="color:#6495ED;" font-size="20px"><bold> TODAY </bold></h3>
          <br>
-         <img src="undersea.jpg" class="img-fluid" alt="Responsive image width="200" height="300">
+         <img src="undersea.jpg" class="img-fluid" alt="Responsive image width="100px" height="100px">
       </div>
       
       <br>
