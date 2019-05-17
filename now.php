@@ -155,7 +155,7 @@ print($row['datee']);*/
 
       <br>
       <div id="photo" align="center">
-      <img src="undersea.jpg" class="img-fluid" alt="Responsive image" width="1000px" height="800px">
+      <img src="undersea.jpg" class="img-fluid" alt="Responsive image" width="900px" height="700px">
       </div>
 </body>  
 </html>
