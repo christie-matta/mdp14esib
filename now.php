@@ -93,7 +93,11 @@
        
    <div id="mnt" align="center">
             <h1 style="color:white;" font-size="50px" ><bold> Latest Updates </bold></h1>
+         <br><br><br>
+         <h3 style="color:#6495ED;"><bold> TODAY </bold></h3>
       </div>
+      
+      <br><br><br>
        
             
 
