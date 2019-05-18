@@ -62,7 +62,7 @@
            </ul>
            <form class="form-inline my-2 my-lg-0">
                <li class="nav-item active">
-               <a class="btn btn-light" href="contact.html"> Sign In <span class="sr-only">(current)</span></a>
+               <a class="btn btn-light" href="signin.html"> Sign In <span class="sr-only">(current)</span></a>
              </li>
            </form>
          </div>
