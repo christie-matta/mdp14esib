@@ -40,7 +40,7 @@
                <a class="nav-link text-white" href="now.html">Latest updates</a>
              </li>
               <li class="nav-item active">
-               <a class="nav-link text-white" href="home.html"> Map <span class="sr-only">(current)</span></a>
+               <a class="nav-link text-white" href="map.html"> Map <span class="sr-only">(current)</span></a>
              </li>
              <li class="nav-item dropdown">
                <a class="nav-link  text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
