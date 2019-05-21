@@ -47,7 +47,7 @@
                  Beaches
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item " href="#">Kfaraabida's public Beach</a>
+                 <a class="dropdown-item " href="tejrib.php">Kfaraabida's public Beach</a>
                  <a class="dropdown-item" href="#">Sour beach</a>
                  <div class="dropdown-divider"></div>
                  <a class="dropdown-item" href="#">Other beaches</a>
