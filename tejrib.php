@@ -138,7 +138,7 @@ catch (PDOException $e) {
 <!DOCTYPE HTML>
 <html>
  <head>  
-  <Title>Azure SQL Database - PHP Website</Title>  
+  <Title>Kfaraabida's public beach-Cost Line Water and Air Quality Monitoring</Title>  
   </head>  
  
   <form method="post" action="?action=add" enctype="multipart/form-data" >  
@@ -187,7 +187,7 @@ chart.render();
 </head>
 <body>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<div id="chartContainer1" align="center" style="height:400 px; width: 40%;"></div>
+<div id="chartContainer1" align="center" style="height:400px; width: 40%;"></div>
 	<br><br>
 
 <div id="chartContainer2" align="center" style="height: 500px; width: 40%;"></div>
