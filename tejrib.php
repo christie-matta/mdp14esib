@@ -192,13 +192,13 @@ chart.render();
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <div id="chartContainer1" align="center" style="height:400px; width: 50%;"></div>
+      <div id="chartContainer1" align="center" style="height:500px; width: 60%;"></div>
     </div>
     <!--<div class="col-sm">
       One of three columns
     </div> -->
     <div class="col-sm">
-      <div id="chartContainer2" align="center" style="height:400px; width: 50%;"></div>
+      <div id="chartContainer2" align="center" style="height:500px; width: 60%;"></div>
     </div>
   </div>
 </div>
