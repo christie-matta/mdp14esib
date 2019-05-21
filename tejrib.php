@@ -188,17 +188,17 @@ chart.render();
 </head>
 <body>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-	One of three columns
+	
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <div id="chartContainer1" align="center" style="height:400px; width: 40%;"></div>
+      <div id="chartContainer1" align="center" style="height:400px; width: 50%;"></div>
     </div>
     <!--<div class="col-sm">
       One of three columns
     </div> -->
     <div class="col-sm">
-      <div id="chartContainer2" align="center" style="height:400px; width: 40%;"></div>
+      <div id="chartContainer2" align="center" style="height:400px; width: 50%;"></div>
     </div>
   </div>
 </div>
