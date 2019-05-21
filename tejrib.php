@@ -190,7 +190,7 @@ chart.render();
 <div id="chartContainer1" align="center" style="height:400px; width: 40%;"></div>
 	<br><br>
 
-<div id="chartContainer2" align="center" style="height: 500px; width: 40%;"></div>
+<div id="chartContainer2" align="center" style="height:400px; width: 40%;"></div>
 
 	
 </body>
