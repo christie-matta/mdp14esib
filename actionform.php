@@ -37,7 +37,7 @@
                <a class="nav-link text-white" href="home.html">Home <span class="sr-only">(current)</span></a>
              </li>
              <li class="nav-item">
-               <a class="nav-link text-white" href="now.html">Latest updates</a>
+               <a class="nav-link text-white" href="now.html">Latest Updates</a>
              </li>
               <li class="nav-item active">
                <a class="nav-link text-white" href="map.html"> Map <span class="sr-only">(current)</span></a>
@@ -47,7 +47,7 @@
                  Beaches
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item " href="tejrib.php">Kfaraabida's public Beach</a>
+                 <a class="dropdown-item " href="tejrib.php">Kfaraabida's public beach</a>
                  <a class="dropdown-item" href="#">Sour beach</a>
                  <div class="dropdown-divider"></div>
                  <a class="dropdown-item" href="#">Other beaches</a>
