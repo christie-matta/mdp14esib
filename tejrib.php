@@ -164,6 +164,7 @@ window.onload = function () {
 	}]
 });
 chart.render();
+	
 	       	var chart = new CanvasJS.Chart("chartContainer2", {
 	animationEnabled: true,
 	theme: "light2",
